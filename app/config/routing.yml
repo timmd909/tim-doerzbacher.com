@@ -1,0 +1,4 @@
+tim_doerzbacher:
+    resource: "@TimDoerzbacherBundle/Resources/config/routing.yml"
+    prefix:   /
+
