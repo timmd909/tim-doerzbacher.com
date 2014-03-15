@@ -8,16 +8,16 @@ $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
 // Use APC for autoloading to improve performance.
 // Change 'sf2' to a unique prefix in order to prevent cache key conflicts
 // with other applications also using APC.
-/*
-$apcLoader = new ApcClassLoader('sf2', $loader);
+
+$apcLoader = new ApcClassLoader('timmd909APC', $loader);
 $loader->unregister();
 $apcLoader->register(true);
-*/
 
 require_once __DIR__.'/../app/AppKernel.php';
 //require_once __DIR__.'/../app/AppCache.php';
 
-$kernel = new AppKernel('prod', false);
+//$kernel = new AppKernel('prod', false);
+$kernel = new AppKernel('dev', false);
 $kernel->loadClassCache();
 //$kernel = new AppCache($kernel);
 

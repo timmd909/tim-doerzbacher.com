@@ -18,10 +18,9 @@ Options -Indexes
 	#RewriteCond %{REQUEST_URI} ^(.*)$
 	#RewriteRule ^(.*)$ http://www.tim-doerzbacher.com\/$1 [R=301,L]
 
-	RewriteCond %{HTTP_HOST} ^www.tim-doerzbacher.com$ 
-	RewriteCond %{REQUEST_URI} ^/(20.*)(.*)
-	RewriteRule ^(.*) http://old.tim-doerzbacher.com/$1$2
-	    
+	#RewriteCond %{HTTP_HOST} ^www.tim-doerzbacher.com$ 
+	#RewriteCond %{REQUEST_URI} ^/(20.*)(.*)
+	#RewriteRule ^(.*) http://old.tim-doerzbacher.com/$1$2
 
     # Determine the RewriteBase automatically and set it as environment variable.
     # If you are using Apache aliases to do mass virtual hosting or installed the
