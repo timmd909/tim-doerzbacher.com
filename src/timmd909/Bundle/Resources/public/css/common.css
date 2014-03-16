@@ -18,6 +18,9 @@ h1 {
 	font-size: 20pt;
 	font-weight: normal;
 	margin: 0 0 10pt 0;
+	color: #1e6490;
+	border-bottom: 1px solid #1e6490;
+	padding-bottom: 1px;
 }
 
 
