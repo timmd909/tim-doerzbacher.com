@@ -7,10 +7,10 @@
 <body>
 	<div id="main-container">
 
-		<header>{% block header %}
-			<img src="{{ asset('bundles/timdoerzbacher/img/header/logo.jpg') }}"
-				alt="Tim-Doerzbacher.com logo" class="logo icon" />			
-		{% endblock %}</header>
+		<header>{% block header %}{% spaceless %}
+			<a href="www.tim-doerzbacher.com"><img src="{{ asset('bundles/timdoerzbacher/img/header/logo.jpg') }}"
+				alt="Tim-Doerzbacher.com logo" class="logo icon" /></a>			
+		{% endspaceless %}{% endblock %}</header>
 		
 		<nav>
 			<ul>
