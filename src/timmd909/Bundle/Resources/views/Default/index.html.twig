@@ -1,1 +1,42 @@
-Hello {{ name }}!
+<html>
+<head>
+	<title>Tim-Doerzbacher.com</title>
+	<link type="text/css" rel="stylesheet" href="{{ asset('bundles/timdoerzbacher/css/common.css') }}" />
+</head>
+	
+<body>
+	<div id="main-container">
+
+		<header>{% block header %}
+			<img src="{{ asset('bundles/timdoerzbacher/img/header/logo.jpg') }}"
+				alt="Tim-Doerzbacher.com logo" class="logo icon" />			
+		{% endblock %}</header>
+		
+		<nav>
+			<ul>
+			{% for curr in pages|reverse %}
+				<li><a href="{{ path('tim_doerzbacher_pages', {'page': curr}) }}" {% if curr == page %}
+					class="current"
+				{% endif %}>
+					<img src="{{ asset('bundles/timdoerzbacher/img/nav/' ~ curr ~ '.svg') }}" />
+				{{ curr|capitalize }}</a></li>	
+			{% endfor %}
+			</ul>
+		</nav>
+		
+		<div id="content">{% block content %}
+			<h1>{% block headline %}
+				{{ page|capitalize }}
+			{% endblock %}</h1>
+			
+		{% endblock %}</div>
+		
+		
+		<div id="bottom-hr"></div>
+		<footer>{% block footer%}
+			Copyright 2014 &mdash; Tim Doerzbacher
+		{% endblock %}</footer>
+		
+	</div>
+</body>
+</html>

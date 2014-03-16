@@ -1,3 +1,4 @@
-tim_doerzbacher_homepage:
-    pattern:  /{page}
-    defaults: { _controller: TimDoerzbacherBundle:Default:index }
+
+tim_doerzbacher_pages:
+  pattern:  /{page}
+  defaults: { _controller: TimDoerzbacherBundle:Default:index, page: "home" }

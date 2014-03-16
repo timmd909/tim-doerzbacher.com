@@ -11,8 +11,18 @@ class DefaultController extends Controller
     	switch ($page) {
 			case '2009': case '2013':  
 				return $this->redirect('http://old.tim-doerzbacher.com/'.$page);
+			case 'blog':  
+				return $this->redirect('http://blog.tim-doerzbacher.com/');
 			default:
-	        	return $this->render('TimDoerzbacherBundle:Default:index.html.twig', array('page' => $page));
-    	}
-    }
+	        	return $this->render(
+	        		'TimDoerzbacherBundle:Default:index.html.twig', 
+	        		array(
+	        			'page' => $page, 
+	        			'pages' => array('home','blog', 'resume', 'links') 
+					)
+			);
+    	} // switch
+    	
+    	return;
+    } // function 
 }
