@@ -17,7 +17,7 @@ class DefaultController extends Controller
 	        	return $this->render(
 	        		'TimDoerzbacherBundle:Default:index.html.twig', 
 	        		array(
-	        			'page' => $page, 
+	        			'page' => $page,  
 	        			'pages' => array('home','blog', 'resume', 'links') 
 					)
 			);
