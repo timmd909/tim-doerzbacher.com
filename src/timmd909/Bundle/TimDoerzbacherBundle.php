@@ -1,4 +1,8 @@
 <?php
+/**
+ * @author Tim Doerzbacher <tim@tim-doerzbacher.com>
+ * 
+ */
 
 namespace timmd909\Bundle;
 

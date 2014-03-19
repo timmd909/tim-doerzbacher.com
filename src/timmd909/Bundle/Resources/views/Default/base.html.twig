@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width" />
 	<link type="text/css" rel="stylesheet" media="screen and (max-width: 800px)" href="{{ asset('bundles/timdoerzbacher/css/mobile.css') }}" />
 	<link type="text/css" rel="stylesheet" media="screen and (min-width: 801px)" href="{{ asset('bundles/timdoerzbacher/css/desktop.css') }}" />
+	<link type="text/css" rel="stylesheet" media="print" href="{{ asset('bundles/timdoerzbacher/css/print.css') }}" />
 </head>
 	
 <body>
@@ -32,10 +33,14 @@
 			</ul>
 		</nav>
 		
-		<div id="content">{% block content %}
+		<div id="content">{% block content_wrapper %}
 			<h1>{% block headline %}
 				{{ page|capitalize }}
 			{% endblock %}</h1>
+			
+			{% block content %}
+			
+			{% endblock %}
 			
 		{% endblock %}</div>
 		
