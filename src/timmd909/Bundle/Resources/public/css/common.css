@@ -4,13 +4,13 @@
 	margin: 0;
 	padding: 0;
 	font-size: 12pt;
+	line-height: 16pt;
 	font-family: Helvetica, Arial, sans-serif;
 	color: #000000; 
 	background: none; 
 }
 
 /* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */
-
 
 body {
 	/*background: #e3e3e3;*/
@@ -25,17 +25,32 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 20pt;
+	line-height: 24pt;
 	border-bottom: 1px solid #1e6490;
 	margin: 32pt 0;
 }
 
 h2 {
+	line-height: 20pt;
 	font-size: 16pt;
 }
 
 h3, h4, h5, h6 {
+	line-height: 18pt;
 	font-size: 14pt;
 }
+
+/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */
+
+a, a:link {
+	text-decoration: none;
+	color: #4598cc;
+	transition-duration: 1s;
+}
+	a:active, a:hover {
+		color: #57beff;
+		text-decoration: underline;
+	}
 
 /* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */
 
@@ -50,6 +65,16 @@ ul {
 
 p {
 	margin: 14pt 0;
+	font: inherit;
+}
+
+blockquote {
+	background: #EEEEEE;
+	font-size: 110%;
+	padding: 12pt 24pt;
+	border: 1px dashed #000;
+	color: #333;
+	font-family: monospace;
 }
 
 /* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */
@@ -93,10 +118,9 @@ nav {
 			position: relative;
 		}
 			nav ul li a {
-				width: 56px; height: 56px;
+				width: 54px; height: 54px;
 				display: block;
 				position: relative;
-				left: -1px; top: -1px;
 				overflow: hidden;
 				border-radius: 30px;
 			}
@@ -138,4 +162,10 @@ footer {
 	text-align: center;
 	font-size: 10pt;
 	color: #666;
+}
+
+/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */
+
+.clear-both {
+	clear: both;
 }
