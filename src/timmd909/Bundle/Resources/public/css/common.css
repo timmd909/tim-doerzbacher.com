@@ -19,14 +19,14 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: #1e6490;
-	margin: 0 0 10pt 0;
+	margin: 10pt 0;
 	font-weight: normal;
 }
 
 h1 {
 	font-size: 20pt;
 	border-bottom: 1px solid #1e6490;
-	margin-bottom: 32pt;
+	margin: 32pt 0;
 }
 
 h2 {
@@ -37,6 +37,14 @@ h3, h4, h5, h6 {
 	font-size: 14pt;
 }
 
+/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */
+
+ul {
+	list-style-type: none;
+}
+	ul li {
+		margin: 4pt 0;
+	}
 
 /* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */
 
