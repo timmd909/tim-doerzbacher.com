@@ -36,3 +36,7 @@ link_categories:
           description: SCIENCE! 
           background: science-foundation.png
 
+        - name: The Onion
+          href: https://www.youtube.com/user/TheOnion
+          description: Laughter. The best medicine.
+          background: the-onion.jpg
