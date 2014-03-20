@@ -50,7 +50,14 @@
 		
 		<div id="bottom-hr"></div>
 		<footer>{% block footer%}
-			Copyright 2014 &mdash; Tim Doerzbacher
+			&copy; 
+			{% set current_year = "now"|date('Y') %}
+			{% if current_year > 2014 %}
+				2014-{{ current_year }}
+			{% else %}
+				{{ current_year }}
+			{% endif %}
+			&mdash; Tim Doerzbacher
 		{% endblock %}</footer>
 		
 	</div>
