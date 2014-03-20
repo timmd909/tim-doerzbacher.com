@@ -77,7 +77,6 @@ ul.links {
 				opacity: 1;
 			}
 			
-/*@media screen and (max-width: 800px) {*/
 @media screen and (max-width: 600px) {
 
 	ul.links {
@@ -133,8 +132,11 @@ ul.links {
 	ul.links li:nth-child(even) { margin-left: 3px;  }
 	ul.links li:nth-child(odd)  { margin-right: 3px; }
 
+} /* @media screen and (max-width: 600px) */
 
-
-
+.fair-use {
+	font-size: 80%;
+	text-align: center;
+	color: #666;
+	position: relative; top: 24px;
 }
-
