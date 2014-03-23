@@ -18,6 +18,8 @@ class DefaultController extends ControllerBase
 				return $this->redirect('http://old.tim-doerzbacher.com/'.$page);
 			case 'blog':  
 				return $this->redirect('http://blog.tim-doerzbacher.com/');
+			case 'catpoo':
+				return $this->redirect('http://blog.tim-doerzbacher.com/category/robotics/catpoo/');
         }
         
         // -=- -=- -=- the rest of these pages are all Symfony pages -=- -=- -=- // 
