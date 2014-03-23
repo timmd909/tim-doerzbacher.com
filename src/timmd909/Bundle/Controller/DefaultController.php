@@ -17,7 +17,7 @@ class DefaultController extends ControllerBase
 			case '2009': case '2013':  
 				return $this->redirect('http://old.tim-doerzbacher.com/'.$page);
 			case 'blog':  
-				return $this->redirect('https://blog.tim-doerzbacher.com/');
+				return $this->redirect('http://blog.tim-doerzbacher.com/');
         }
         
         // -=- -=- -=- the rest of these pages are all Symfony pages -=- -=- -=- // 
