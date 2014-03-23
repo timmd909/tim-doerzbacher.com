@@ -11,6 +11,11 @@ link_categories:
           href: http://facebook.com/timothy.doerzbache
           description: I click the "Share" button a lot on random websites.
           background: facebook.jpg
+          
+        - name: My GitHub Page
+          href: http://github.com/timmd909
+          description: My personal GitHub homepage
+          background: github.jpg
             
     - name: Social Media
       links:
