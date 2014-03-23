@@ -1,6 +1,6 @@
 link_categories:
   
-    - name: Personal
+    - name: "Personal & Social Networking"
       links:
         - name: Cat Antagonizing Tactical Platform of Oppression
           href: http://tim-doerzbacher.com/catpoo
@@ -17,8 +17,6 @@ link_categories:
           description: My personal GitHub homepage
           background: github.jpg
             
-    - name: Social Media
-      links:
         - name: My somewhat neglected LinkedIn profile.
           href: http://www.linkedin.com/pub/tim-doerzbacher/86/438/664/
           description: Seems like a dating website reskinned for business.
