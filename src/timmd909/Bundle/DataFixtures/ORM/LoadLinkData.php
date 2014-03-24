@@ -25,7 +25,7 @@ class LoadLinkData implements FixtureInterface
 		$yaml = \yaml_parse_file($yamlFilename);
 		
 		if ($yaml === FALSE) {
-			error_log("Unable to load '$linksFilename'");
+			error_log("Unable to load '$yamlFilename'");
 			return;
 		}
 		
@@ -35,8 +35,8 @@ class LoadLinkData implements FixtureInterface
 		$categoryWeight = 0;
 		foreach ($linkCategories as $linkCategory) {
 			$linkCategoryEntity = new LinkCategory();
-			$linkCategoryEntity->setCategoryName($linkCategory['name']);
-			$linkCategoryEntity->setCategoryWeight($categoryWeight++);
+			$linkCategoryEntity->setName($linkCategory['name']);
+			$linkCategoryEntity->setWeight($categoryWeight++);
 			
 			$manager->persist($linkCategoryEntity);
 			
@@ -44,13 +44,13 @@ class LoadLinkData implements FixtureInterface
 			$linkWeight = 0;
 			foreach ($linkCategory['links'] as $link) {
 				$linkEntity = new Link();
-				$linkEntity->setLinkName($link['name']);
-				$linkEntity->setLinkTarget($link['href']);
-				$linkEntity->setLinkDescription($link['description']);
-				$linkEntity->setLinkCategory($linkCategoryEntity);
-				$linkEntity->setLinkWeight($linkWeight++);
+				$linkEntity->setName($link['name']);
+				$linkEntity->setTarget($link['href']);
+				$linkEntity->setDescription($link['description']);
+				$linkEntity->setCategory($linkCategoryEntity);
+				$linkEntity->setWeight($linkWeight++);
 				if (isset($link['background']))
-					$linkEntity->setLinkBackground($link['background']);
+					$linkEntity->setImage($link['background']);
 				$manager->persist($linkEntity);
 			}
 		}

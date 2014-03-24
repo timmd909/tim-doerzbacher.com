@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="link_category")
+ * @ORM\Table(name="link_categories")
  */
 class LinkCategory
 {
@@ -25,12 +25,12 @@ class LinkCategory
 	/**
 	 * @ORM\Column(type="string")
 	 */
-	protected $categoryName;
+	protected $name;
 
 	/**
 	 * @ORM\Column(type="integer")
 	 */
-	protected $categoryWeight = -1;
+	protected $weight = -1;
 	
 	/**
 	 * @ORM\OneToMany(targetEntity="Link", mappedBy="linkCategory")
@@ -43,6 +43,12 @@ class LinkCategory
 	public function __construct() {
         $this->links = new ArrayCollection();
     }
+	
+	function __toString()
+	{
+		return sprintf("Link Category: '%s' (%d)",
+			$this->name, $this->weight);
+	}
 	
 	/**
      * Get id
@@ -57,26 +63,26 @@ class LinkCategory
 	/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */
 
     /**
-     * Set categoryName
+     * Set name
      *
-     * @param string $categoryName
+     * @param string $name
      * @return LinkCategory
      */
-    public function setCategoryName($categoryName)
+    public function setName($categoryName)
     {
-        $this->categoryName = $categoryName;
+        $this->name = $categoryName;
 
         return $this;
     }
 
     /**
-     * Get categoryName
+     * Get name
      *
      * @return string 
      */
-    public function getCategoryName()
+    public function getName()
     {
-        return $this->categoryName;
+        return $this->name;
     }
 	
 	/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */
@@ -84,12 +90,12 @@ class LinkCategory
     /**
      * Set categoryWeight
      *
-     * @param string $categoryWeight
+     * @param string $weight
      * @return LinkCategory
      */
-    public function setCategoryWeight($categoryWeight)
+    public function setWeight($weight)
     {
-        $this->categoryWeight = $categoryWeight;
+        $this->weight = $weight;
 
         return $this;
     }
@@ -99,9 +105,9 @@ class LinkCategory
      *
      * @return string 
      */
-    public function getCategoryWeight()
+    public function getyWeight()
     {
-        return $this->categoryWeight;
+        return $this->weight;
     }
 
 	/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */	

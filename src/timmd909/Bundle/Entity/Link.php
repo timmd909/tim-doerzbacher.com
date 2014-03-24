@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  
 /**
  * @ORM\Entity
- * @ORM\Table(name="link")
+ * @ORM\Table(name="links")
  */
 class Link
 {
@@ -24,33 +24,33 @@ class Link
 	/**
 	 * @ORM\Column(type="string")
 	 */
-	protected $linkName;
+	protected $name;
 	
 	/**
 	 * @ORM\Column(type="string")
 	 */
-	protected $linkDescription;
+	protected $description;
 	
 	/**
 	 * @ORM\Column(type="string")
 	 */
-	protected $linkTarget;
+	protected $target;
 	
 	/**
 	 * @ORM\Column(type="string")
 	 */
-	protected $linkWeight = -1;
+	protected $weight = -1;
 	
 	/**
 	 * @ORM\ManyToOne(targetEntity="LinkCategory", inversedBy="links")
 	 * @ORM\JoinColumn(name="link_category_id", referencedColumnName="id")
 	 */
-	protected $linkCategory;
+	protected $category;
 	
 	/**
 	 * @ORM\Column(type="string", nullable=true)
 	 */
-	protected $linkBackground;
+	protected $image;
 
 	/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */	
 
@@ -65,51 +65,51 @@ class Link
     }
 
     /**
-     * Set linkName
+     * Set name
      *
      * @param string $linkName
      * @return Link
      */
-    public function setLinkName($linkName)
+    public function setName($linkName)
     {
-        $this->linkName = $linkName;
+        $this->name = $linkName;
 
         return $this;
     }
 
     /**
-     * Get linkName
+     * Get name
      *
      * @return string 
      */
-    public function getLinkName()
+    public function getName()
     {
-        return $this->linkName;
+        return $this->name;
     }
 
 	/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */	
 
     /**
-     * Set linkCategory
+     * Set category
      *
      * @param \timmd909\Bundle\Entity\LinkCategory $linkCategory
      * @return Link
      */
-    public function setLinkCategory(\timmd909\Bundle\Entity\LinkCategory $linkCategory = null)
+    public function setCategory(\timmd909\Bundle\Entity\LinkCategory $linkCategory = null)
     {
-        $this->linkCategory = $linkCategory;
+        $this->category = $linkCategory;
 
         return $this;
     }
 
     /**
-     * Get linkCategory
+     * Get category
      *
      * @return \timmd909\Bundle\Entity\LinkCategory 
      */
-    public function getLinkCategory()
+    public function getCategory()
     {
-        return $this->linkCategory;
+        return $this->category;
     }
 
 	/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */	
@@ -117,49 +117,49 @@ class Link
 	/**
      * Set linkTarget
      *
-     * @param string $linkTarget
+     * @param string $target
      * @return Link
      */
-    public function setLinkTarget($linkTarget)
+    public function setTarget($target)
     {
-        $this->linkTarget = $linkTarget;
+        $this->target = $target;
 
         return $this;
     }
 
     /**
-     * Get linkTarget
+     * Get target
      *
      * @return string 
      */
-    public function getLinkTarget()
+    public function getTarget()
     {
-        return $this->linkTarget;
+        return $this->target;
     }
 
 	/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */	
 
     /**
-     * Set linkWeight
+     * Set weight
      *
      * @param string $linkWeight
      * @return Link
      */
-    public function setLinkWeight($linkWeight)
+    public function setWeight($linkWeight)
     {
-        $this->linkWeight = $linkWeight;
+        $this->weight = $linkWeight;
 
         return $this;
     }
 
     /**
-     * Get linkWeight
+     * Get weight
      *
      * @return string 
      */
-    public function getLinkWeight()
+    public function getWeight()
     {
-        return $this->linkWeight;
+        return $this->weight;
     }
 
 	/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */	
@@ -170,9 +170,9 @@ class Link
      * @param string $linkDescription
      * @return Link
      */
-    public function setLinkDescription($linkDescription)
+    public function setDescription($linkDescription)
     {
-        $this->linkDescription = $linkDescription;
+        $this->description = $linkDescription;
 
         return $this;
     }
@@ -182,33 +182,33 @@ class Link
      *
      * @return string 
      */
-    public function getLinkDescription()
+    public function getDescription()
     {
-        return $this->linkDescription;
+        return $this->description;
     }
 
 	/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */	
 
     /**
-     * Set linkBackground
+     * Set iamge
      *
-     * @param string $linkBackground
+     * @param string $image
      * @return Link
      */
-    public function setLinkBackground($linkBackground)
+    public function setImage($image)
     {
-        $this->linkBackground = $linkBackground;
+        $this->image = $image;
 
         return $this;
     }
 
     /**
-     * Get linkBackground
+     * Get image
      *
      * @return string 
      */
-    public function getLinkBackground()
+    public function getImage()
     {
-        return $this->linkBackground;
+        return $this->image;
     }
 }
