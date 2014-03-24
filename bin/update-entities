@@ -1,7 +1,11 @@
 #!/bin/bash 
 
-pushd "`dirname $0`/.." > /dev/null 
+pushd "`dirname $0`/.." > /dev/null
 
-./app/console  generate:doctrine:entities --no-backup timmd909/Bundle/Entity/Language
+for CLASS in Skill Link LinkCategory Experience
+do
+	TABLE="`basename \"$CLASS\" | sed 's/.php//g'`"
+	./app/console  generate:doctrine:entities --no-backup "timmd909/Bundle/Entity/$TABLE"
+done
 
 popd > /dev/null

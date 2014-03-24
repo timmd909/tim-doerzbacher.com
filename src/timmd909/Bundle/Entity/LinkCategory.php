@@ -105,7 +105,7 @@ class LinkCategory
      *
      * @return string 
      */
-    public function getyWeight()
+    public function getWeight()
     {
         return $this->weight;
     }

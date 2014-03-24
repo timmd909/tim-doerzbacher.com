@@ -8,10 +8,11 @@ namespace timmd909\Bundle\DataFixtures;
  
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use timmd909\Bundle\Entity\Experience;
 use timmd909\Bundle\Entity\Language;
-use timmd909\Bundle\Entity\Tool;
-use timmd909\Bundle\Entity\Skill;
 use timmd909\Bundle\Entity\OperatingSystem;
+use timmd909\Bundle\Entity\Skill;
+use timmd909\Bundle\Entity\Tool;
   
 class LoadResumeData implements FixtureInterface
 {
@@ -70,12 +71,14 @@ class LoadResumeData implements FixtureInterface
 	
 	protected function loadExperiences(ObjectManager $manager, array $experiences) 
 	{
-		// foreach ($experiences['entries'] as $curr) {
-			// $entity = new Experience();
-			// $entity->setName($curr['name']);
-			// $entity->setLevel($curr['level']);
-			// $manager->persist($entity); 
-		// }
+		foreach ($experiences['entries'] as $curr) {
+			$entity = new Experience();
+			$entity->setName($curr['name']);
+			$entity->setDescription($curr['description']);
+			$entity->setStarted($curr['duration']['start']);
+			$entity->setEnded($curr['duration']['end']);
+			$manager->persist($entity); 
+		}
 	}
 
 	protected function loadOSes(ObjectManager $manager, array $oses) 
