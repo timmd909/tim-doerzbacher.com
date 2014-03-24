@@ -1,0 +1,7 @@
+#!/bin/bash 
+
+pushd "`dirname $0`/.." > /dev/null 
+
+./app/console  generate:doctrine:entities --no-backup timmd909/Bundle/Entity/Language
+
+popd > /dev/null
