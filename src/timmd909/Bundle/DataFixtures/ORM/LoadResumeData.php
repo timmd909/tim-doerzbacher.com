@@ -26,19 +26,22 @@ class LoadResumeData implements FixtureInterface
 			return;
 		}
 
-		$this->loadLanguages($yaml['resume']['languages']);
+		$this->loadLanguages($manager, $yaml['resume']['languages']);
 				
 		
 		// we're all done, save our progress :-)
 		$manager->flush();
 	}
 	
-	protected function loadLanguages($languages)
+	protected function loadLanguages(ObjectManager $manager, array $languages)
 	{
 		foreach ($languages['entries'] as $currLanguage)
 		{
-			
-		}		
+			$languageEntity = new Language();
+			$languageEntity->setName($currLanguage['name']);
+			$languageEntity->setLevel($currLanguage['level']);
+			$manager->persist($languageEntity);
+		}
 	}
 	
 
