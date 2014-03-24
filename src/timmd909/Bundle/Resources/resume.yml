@@ -25,7 +25,7 @@ resume:
       - { name: "PHP"         , level: 5 }
       - { name: "Yaml"        , level: 5 }
       
-  software:
+  tools:
     title: "Software & Tools"
     entries:
       - { name: "Apache"             , level: 4 }

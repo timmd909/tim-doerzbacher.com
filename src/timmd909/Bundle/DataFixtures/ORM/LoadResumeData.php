@@ -26,8 +26,11 @@ class LoadResumeData implements FixtureInterface
 			return;
 		}
 
-		$this->loadLanguages($manager, $yaml['resume']['languages']);
-				
+		$this->loadLanguages  ($manager, $yaml['resume']['languages'] );
+		$this->loadTools      ($manager, $yaml['resume']['tools']     );
+		$this->loadSkills     ($manager, $yaml['resume']['skills']    );
+		$this->loadExperiences($manager, $yaml['resume']['experience']);
+		$this->loadOSes       ($manager, $yaml['resume']['operating_systems']);
 		
 		// we're all done, save our progress :-)
 		$manager->flush();
@@ -43,6 +46,27 @@ class LoadResumeData implements FixtureInterface
 			$manager->persist($languageEntity);
 		}
 	}
+	
+	protected function loadTools(ObjectManager $manager, array $tools) 
+	{
+		
+	}
+
+	protected function loadSkills(ObjectManager $manager, array $skill) 
+	{
+		
+	}
+	
+	protected function loadExperiences(ObjectManager $manager, array $experiences) 
+	{
+		
+	}
+
+	protected function loadOSes(ObjectManager $manager, array $oses) 
+	{
+		
+	}
+
 	
 
 } // class

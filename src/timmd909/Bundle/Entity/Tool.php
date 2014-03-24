@@ -5,11 +5,11 @@ namespace timmd909\Bundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Language
+ * Tools
  *
  * @ORM\Entity
- * @ORM\Table(name="languages")
+ * @ORM\Table(name="tools")
  */
-class Language extends SkillBase
+class Tool extends SkillBase
 {
 }
