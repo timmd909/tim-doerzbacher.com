@@ -41,6 +41,7 @@ resume:
       - { name: "Git"                , level: 5 }    
       - { name: "jQuery"             , level: 5 }
       - { name: "MediaWiki"          , level: 3 }
+      - { name: "Nagios"             , level: 3 }
       - { name: "Phabricator"        , level: 3 }
       - { name: "Subversion"         , level: 5 }
       - { name: "Symfony2"           , level: 4 }
@@ -69,18 +70,51 @@ resume:
     entries:
       - name: "Walking Thumbs"
         description: "Lead Server Developer"
+        responsibilites: 
+          - Integrating PHP and ejabberd based nodes and their respective 
+            database nodes into a custom XMPP-based messaging system.
+          - Created syncing algorithm for finding other users on the system
+            - One-way encryption was used for matches instead of original 
+              contact information.
+            - This prevented privacy concerns of having all user's contacts' 
+              data stored unecrypted on the servers.
+            - Normalized email and phone numbers to prevent false positives
+              and maximize matches.
+          - Setup monitoring system with Nagios.
+          - Handled all server related tasks to support several other developers
+            working on the Android and iOS clients.   
         duration:
           start: "2013"
           end: "2014"
           
       - name: "Kb Port"
         description: "Senior Web Developer"
+        responsibilites: 
+          - Developed RAID-based archival system for compiling video sessions
+            from all network connected video recording products. 
+            - System has up to 14TB of storage allowing hundreds of days
+              of recording video to be quickly searched, indexed, and shared.
+            - Automated backups to the archival unit eases consolation of
+              student videos and prevents the video records from filling up.
+          - Developed customized customer management and inventory
+            management software.
+            - Features included allowing automated upgrades to systems out
+              in the field to facilitate up-selling new products and features.
+            - The system interfaced with copy protection code on the systems
+              to prevent unauthorized cloning.   
+          
         duration:
           start: "2008"
           end: "2013"
             
       - name: "PiCon Web Design & Marketing"
         description: "Subcontractor"
+        responsibilities:
+          - Developed a web-based commercial employment application designed
+            for the trucking industry, yet generalized enough to be
+            used by any industry.
+          - Rewritten .NET and Microsoft based websites for use
+            in LAMP servers. 
         duration:
           start: "2007"
           end:
