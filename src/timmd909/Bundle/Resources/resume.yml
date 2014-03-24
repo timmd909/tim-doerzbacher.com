@@ -1,0 +1,86 @@
+resume:
+  headline: "Self taught and experience developer seeks difficult challenges"
+  
+  phone_number: "1-412-758-0179"  
+  
+  address:
+    street: "710 E. Shady Drive, Apt 6"
+    city: "Pittsburgh"
+    state: "Pennsylvanian"
+    zip: "15228"
+  
+  languages:
+    title: "Languages"
+    entries:
+      - { name: "ActionScript", level: 5 }
+      - { name: "Bash"        , level: 4 }
+      - { name: "C/C++"       , level: 3 }
+      - { name: "CSS"         , level: 5 }
+      - { name: "Erlang"      , level: 3 }
+      - { name: "HTML"        , level: 5 }
+      - { name: "JavaScript"  , level: 5 }
+      - { name: "MXML"        , level: 4 }
+      - { name: "MySQL"       , level: 5 }
+      - { name: "OpenGL"      , level: 2 }
+      - { name: "PHP"         , level: 5 }
+      - { name: "Yaml"        , level: 5 }
+      
+  software:
+    title: "Software & Tools"
+    entries:
+      - { name: "Apache"             , level: 4 }
+      - { name: "Adobe Dreamweaver"  , level: 3 }
+      - { name: "Adobe Illustrator"  , level: 5 }
+      - { name: "Adobe InDesign"     , level: 4 }
+      - { name: "Adobe Photoshop"    , level: 5 }
+      - { name: "Adobe Flash"        , level: 4 }
+      - { name: "Adobe Flash Builder", level: 4 }
+      - { name: "CVS"                , level: 3 }
+      - { name: "Eclipse"            , level: 5 }
+      - { name: "ejabberd"           , level: 4 }
+      - { name: "Git"                , level: 5 }    
+      - { name: "jQuery"             , level: 5 }
+      - { name: "MediaWiki"          , level: 3 }
+      - { name: "Phabricator"        , level: 3 }
+      - { name: "Subversion"         , level: 5 }
+      - { name: "Symfony2"           , level: 4 }
+      - { name: "WordPress"          , level: 3 }
+      
+  skills: 
+    title: "Skills"
+    entries:
+      - { name: "AJAX"                       , level: 5 }
+      - { name: "Database Design"            , level: 4 }
+      - { name: "Graphic Design"             , level: 3 }
+      - { name: "LAMP Servers"               , level: 5 }
+      - { name: "Linux Server Administration", level: 4 }
+      - { name: "Portraiture"                , level: 2 }
+      - { name: "Website Design"             , level: 4 }
+      
+  operating_systems:
+    title: "Operating Systems"
+    entries:
+      - { name: "Mac OS X" , level: 4 }
+      - { name: "GNU/Linux", level: 5 }
+      - { name: "Windows"  , level: 1 }
+
+  experience:
+    title: "Work Experience"
+    entries:
+      - name: "Walking Thumbs"
+        description: "Lead Server Developer"
+        duration:
+          start: "2013"
+          end: "2014"
+          
+      - name: "Kb Port"
+        description: "Senior Web Developer"
+        duration:
+          start: "2008"
+          end: "2013"
+            
+      - name: "PiCon Web Design & Marketing"
+        description: "Subcontractor"
+        duration:
+          start: "2007"
+          end:
