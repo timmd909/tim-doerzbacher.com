@@ -15,8 +15,15 @@
 	<div id="main-container">
 
 		<header>{% block header %}{% spaceless %}
+{# 			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="bill-pay">#}
+{# 				<input type="hidden" name="cmd" value="_s-xclick">#}
+{# 				<input type="hidden" name="hosted_button_id" value="7YYUSEHTA4YZY">#}
+{# 				<input type="image" src="http://www.tim-doerzbacher.com/bundles/timdoerzbacher/img/bill-pay.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">#}
+{# 				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">#}
+{# 			</form>#}
+		
 			<a href="www.tim-doerzbacher.com"><img src="{{ asset('bundles/timdoerzbacher/img/header/logo.png') }}"
-				alt="Tim-Doerzbacher.com logo" class="logo icon" /></a>			
+				alt="Tim-Doerzbacher.com logo" class="logo icon" /></a>
 		{% endspaceless %}{% endblock %}</header>
 		
 		<nav>

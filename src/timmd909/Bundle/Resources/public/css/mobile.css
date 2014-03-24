@@ -32,3 +32,16 @@ nav {
 div#bottom-hr {
 	margin: 72px 0 0 0;
 }
+
+
+@media screen and (max-width: 512px) {
+	header .bill-pay {
+		width: 61px; height: 40px;
+		top: 52px;
+	}
+		header .bill-pay img {
+			width: 61px; height: 80px;
+		}
+	
+}	
+	

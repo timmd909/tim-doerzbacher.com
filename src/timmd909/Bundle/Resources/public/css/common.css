@@ -110,6 +110,7 @@ blockquote {
 
 header {
 	height: 80px;
+	position: relative;
 }
 	header img.logo {
 		display: block;
@@ -119,6 +120,21 @@ header {
 		height: 64px; 
 		width: 316px;
 	}
+	
+	header .bill-pay {
+		position: absolute;
+		top: 12px; right: 0pt;
+		/*width: 88px; height: 58px;*/
+		width: 68px; height: 45px;
+		overflow: hidden;
+		background: #fff;
+	}
+		header .bill-pay img {
+			/*width: 88px; height: 116px;*/
+			width: 68px; height: 90px;
+			position: absolute; 
+			top: 0; bottom: auto;
+		}
 	
 nav {
 	background: #26698f;

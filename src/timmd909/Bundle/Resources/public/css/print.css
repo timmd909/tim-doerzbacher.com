@@ -3,6 +3,10 @@ nav {
 	display: none;	
 }
 
+.bill-pay {
+	display: none;
+}
+
 footer {
 	font-size: 8pt;
 }
