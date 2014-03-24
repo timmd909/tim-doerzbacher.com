@@ -18,9 +18,11 @@ class ResumeController extends ControllerBase
         );
         $template = $this->getTemplateFilename('resume');
 		
-		
-		$experiences = $this->experienceRepository->findAll();
-		$options['experiences'] = $experiences;
+		$options['experiences']       = $this->experienceRepository->findAll();
+		$options['skills']            = $this->skillRepository->findAll();
+		$options['tools']             = $this->toolRepository->findAll();
+		$options['languages']         = $this->languageRepository->findAll();
+		$options['operating_systems'] = $this->operatingSystemRepository->findAll();
 		
 		
 		// // load all the categories from the database

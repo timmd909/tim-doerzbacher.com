@@ -4,7 +4,7 @@
 
 {% block stylesheets %}
 {{ parent() }}
-<link type="text/css" rel="stylesheet" media="screen" href="{{ asset('bundles/timdoerzbacher/css/resume.css') }}" />
+<link type="text/css" rel="stylesheet" href="{{ asset('bundles/timdoerzbacher/css/resume.css') }}" />
 {% endblock %}
 
 {# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
@@ -22,6 +22,7 @@
 			{% if info.ended is null %}Present {% else %} {{ info.ended }}{% endif %} 
 		</div>
 		<h3>{{ info.name }}</h3>
+		<div class="description">{{ info.description }}</div>
 		<ul>
 			<li>Lorem <ul><li>a</li><li>b </li></ul>
 			</li>
@@ -41,8 +42,40 @@
 		<p>But safe to assume I know everything. I don't yet, but I learn real fast.</p>
 	</blockquote>
 	
-	<div class="section">
+	<div class="section skillsets">
 		<h2>What I Can Do</h2>
+
+		<div class="sub-section">
+			<h3>Operating Systems</h3>
+			<ul class="operating-systems">{% for os in operating_systems %}
+				<li>{{ os.name }}</li>
+			{% endfor %}</ul>
+		</div>
+		
+		<div class="sub-section">
+			<h3>Skills</h3>
+			<ul class="skills">{% for skill in skills %}
+				<li>{{ skill.name }}</li>
+			{% endfor %}</ul>
+		</div>
+
+		<div class="sub-section">
+			<h3>Languages</h3>
+			<ul class="languages">{% for os in languages %}
+				<li>{{ os.name }}</li>
+			{% endfor %}</ul>
+		</div>
+		
+		
+		<div class="sub-section">
+			<h3>Software &amp; Tools</h3>
+			<ul class="tools">{% for tool in tools %}
+				<li>{{ tool.name }}</li>
+			{% endfor %}</ul>
+		</div>
+		
+		<div class="clear-both"></div>
+		
 	</div>
 	
 	<div class="section experiences">
