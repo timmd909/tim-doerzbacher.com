@@ -1,5 +1,11 @@
 {% extends "TimDoerzbacherBundle:Default:base.html.twig" %}
 
+{# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
+
+{% block stylesheets %}
+{{ parent() }}
+<link type="text/css" rel="stylesheet" media="screen" href="{{ asset('bundles/timdoerzbacher/css/resume.css') }}" />
+{% endblock %}
 
 {# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
 
@@ -10,12 +16,44 @@
 
 {# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
 
+{% macro experience(info) %}
+	<div class="experience">
+		<div class="duration">{{ info.started }} &mdash;
+			{% if info.ended is null %}Present {% else %} {{ info.ended }}{% endif %} 
+		</div>
+		<h3>{{ info.name }}</h3>
+		<ul>
+			<li>Lorem <ul><li>a</li><li>b </li></ul>
+			</li>
+			<li>Ipsum</li>
+		</ul>
+	</div>
+{% endmacro %}
+
+{% import _self as resume %}
+
+{# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
+
 {% block content %}
 
-<blockquote>
-	<p>Under construction.</p>
-	<p>But safe to assume I know everything. I don't yet, but I learn real fast.</p>
-</blockquote>
-
+	<blockquote>
+		<p>Under construction.</p>
+		<p>But safe to assume I know everything. I don't yet, but I learn real fast.</p>
+	</blockquote>
+	
+	<div class="section">
+		<h2>What I Can Do</h2>
+	</div>
+	
+	<div class="section experiences">
+		<h2>Where I've Worked</h2>
+		{% for curr in experiences %}
+			{{  resume.experience(curr) }}
+		{% endfor %}
+	</div>
+		
+	<div class="section references">
+		References available upon request.
+	</div>
 
 {% endblock %}

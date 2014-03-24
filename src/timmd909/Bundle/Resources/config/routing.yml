@@ -2,7 +2,10 @@
 tim_doerzbacher_links:
   pattern:  /links
   defaults: { _controller: TimDoerzbacherBundle:Link:link}
-#  defaults: { _controller: TimDoerzbacherBundle:Default:link}
+
+tim_doerzbacher_resume:
+  pattern:  /resume
+  defaults: { _controller: TimDoerzbacherBundle:Resume:resume}
   
 tim_doerzbacher_pages:
   pattern:  /{page}

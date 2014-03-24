@@ -1,0 +1,21 @@
+.section {
+	border: 1px solid #f0f;
+	margin: 12pt 0;
+	padding: 4pt;
+}
+	.section h2 {
+		border-bottom: 1px solid #666;
+	}
+
+	.section .experience {
+		margin: 4pt 8pt;
+	}
+
+		.section .experience .duration {
+			float: right;
+		}
+
+		.section .experience ul {
+			list-style-type: circle;
+			list-style-position: outside;
+		}
