@@ -1,0 +1,17 @@
+#!/bin/bash 
+
+pushd "`dirname $0`/.." > /dev/null
+
+echo "Migrating database"
+./app/console doctrine:migrations:migrate -n
+
+echo
+
+echo "Loading fixtures"
+./app/console doctrine:fixtures:load -n
+
+echo
+
+echo "Done" 
+
+popd > /dev/null
