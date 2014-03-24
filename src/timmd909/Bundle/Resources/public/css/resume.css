@@ -69,12 +69,14 @@
 
 .section.skillsets {
 }
+	.section.skillsets .column {
+		float: left;
+	}
 	.section.skillsets .sub-section {
 		float: left;
-		margin: 0 8pt;
+		margin: 0 4pt;
 		padding: 12pt;
-		min-width: 160pt;
-		max-width: 320pt;
+		min-width: 144pt;
 	}
 
 .section .experience {
