@@ -68,6 +68,7 @@ a, a:link {
 
 ul {
 	list-style-type: none;
+	margin-left: 16pt;
 }
 	ul li {
 		margin: 4pt 0;
