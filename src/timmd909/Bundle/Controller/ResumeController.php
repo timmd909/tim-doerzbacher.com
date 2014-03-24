@@ -13,7 +13,7 @@ class ResumeController extends ControllerBase
     public function resumeAction()
     {
         $options = array(
-            'page' => 'links',  
+            'page' => 'resume',  
             'pages' => $this->getDefaultPages() 
         );
         $template = $this->getTemplateFilename('resume');
