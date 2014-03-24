@@ -24,16 +24,16 @@ class LinkController extends ControllerBase
 		
 		foreach ($linkCategories as $category) {
 			$tempCategory = array(
-				'name'  => $category->getCategoryName(),
+				'name'  => $category->getName(),
 				'links' => array()
 			);
 			
 			foreach ($category->getLinks() as $link) {
 				$tempLink = array(
-					'name'        => $link->getLinkName(),
-					'href'        => $link->getLinkTarget(),
-					'description' => $link->getLinkDescription(),
-					'background'  => $link->getLinkBackground()
+					'name'        => $link->getName(),
+					'href'        => $link->getTarget(),
+					'description' => $link->getDescription(),
+					'background'  => $link->getImage()
 				);
 				$tempCategory['links'][] = $tempLink;
 			}

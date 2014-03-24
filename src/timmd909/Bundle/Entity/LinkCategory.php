@@ -33,7 +33,7 @@ class LinkCategory
 	protected $weight = -1;
 	
 	/**
-	 * @ORM\OneToMany(targetEntity="Link", mappedBy="linkCategory")
+	 * @ORM\OneToMany(targetEntity="Link", mappedBy="category")
 	 */
 	protected $links;
 	
