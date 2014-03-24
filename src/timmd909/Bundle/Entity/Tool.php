@@ -10,6 +10,6 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="tools")
  */
-class Tool extends SkillBase
+class Tool extends Skill
 {
 }

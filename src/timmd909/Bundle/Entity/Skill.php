@@ -8,9 +8,9 @@ use Doctrine\ORM\Mapping as ORM;
  * Language
  *
  * @ORM\Entity
- * @ORM\Table(name="skill_base")
+ * @ORM\Table(name="skills")
  */
-class SkillBase
+class Skill
 {
     /**
      * @var integer

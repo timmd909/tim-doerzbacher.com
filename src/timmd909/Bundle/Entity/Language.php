@@ -10,6 +10,6 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="languages")
  */
-class Language extends SkillBase
+class Language extends Skill
 {
 }

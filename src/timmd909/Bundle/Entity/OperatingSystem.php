@@ -10,6 +10,6 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="operating_systems")
  */
-class OperatingSystem extends SkillBase
+class OperatingSystem extends Skill
 {
 }

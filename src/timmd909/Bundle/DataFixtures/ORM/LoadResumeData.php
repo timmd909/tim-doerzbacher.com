@@ -9,7 +9,9 @@ namespace timmd909\Bundle\DataFixtures;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use timmd909\Bundle\Entity\Language;
-
+use timmd909\Bundle\Entity\Tool;
+use timmd909\Bundle\Entity\Skill;
+use timmd909\Bundle\Entity\OperatingSystem;
   
 class LoadResumeData implements FixtureInterface
 {
@@ -38,33 +40,52 @@ class LoadResumeData implements FixtureInterface
 	
 	protected function loadLanguages(ObjectManager $manager, array $languages)
 	{
-		foreach ($languages['entries'] as $currLanguage)
-		{
-			$languageEntity = new Language();
-			$languageEntity->setName($currLanguage['name']);
-			$languageEntity->setLevel($currLanguage['level']);
-			$manager->persist($languageEntity);
+		foreach ($languages['entries'] as $curr) {
+			$entity = new Language();
+			$entity->setName($curr['name']);
+			$entity->setLevel($curr['level']);
+			$manager->persist($entity);
 		}
 	}
 	
 	protected function loadTools(ObjectManager $manager, array $tools) 
 	{
-		
+		foreach ($tools['entries'] as $curr) {
+			$entity = new Tool();
+			$entity->setName($curr['name']);
+			$entity->setLevel($curr['level']);
+			$manager->persist($entity); 
+		}
 	}
 
-	protected function loadSkills(ObjectManager $manager, array $skill) 
+	protected function loadSkills(ObjectManager $manager, array $skills) 
 	{
-		
+		foreach ($skills['entries'] as $curr) {
+			$entity = new Skill();
+			$entity->setName($curr['name']);
+			$entity->setLevel($curr['level']);
+			$manager->persist($entity); 
+		}
 	}
 	
 	protected function loadExperiences(ObjectManager $manager, array $experiences) 
 	{
-		
+		// foreach ($experiences['entries'] as $curr) {
+			// $entity = new Experience();
+			// $entity->setName($curr['name']);
+			// $entity->setLevel($curr['level']);
+			// $manager->persist($entity); 
+		// }
 	}
 
 	protected function loadOSes(ObjectManager $manager, array $oses) 
 	{
-		
+		foreach ($oses['entries'] as $curr) {
+			$entity = new OperatingSystem();
+			$entity->setName($curr['name']);
+			$entity->setLevel($curr['level']);
+			$manager->persist($entity); 
+		}
 	}
 
 	
