@@ -38,6 +38,7 @@ resume:
       - { name: "CVS"                , level: 3 }
       - { name: "Eclipse"            , level: 5 }
       - { name: "ejabberd"           , level: 4 }
+      - { name: "Facebook APIs"      , level: 3 }
       - { name: "Git"                , level: 5 }    
       - { name: "jQuery"             , level: 5 }
       - { name: "MediaWiki"          , level: 3 }
@@ -45,6 +46,7 @@ resume:
       - { name: "Phabricator"        , level: 3 }
       - { name: "Subversion"         , level: 5 }
       - { name: "Symfony2"           , level: 4 }
+      - { name: "Thrift"             , level: 4 }
       - { name: "WordPress"          , level: 3 }
       
   skills: 
