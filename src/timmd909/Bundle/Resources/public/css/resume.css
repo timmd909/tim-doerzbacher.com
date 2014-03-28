@@ -1,7 +1,8 @@
 .section {
-	margin: 12pt 0;
+	margin: 12pt auto;
 	padding: 4pt;
 	clear: both;
+	max-width: 900px;
 }
 	.section .experience {
 		margin: 4pt 8pt 8pt 8pt;
@@ -31,11 +32,6 @@
 		border-bottom: 1px solid #AAA;
 		font-size: 12pt;
 	}
-	.section ul li {
-		line-height: 13pt;
-		margin: 2pt 0;
-		
-	}
 	.section .sub-section ul {
 		margin: 0;
 	}
@@ -43,6 +39,14 @@
 		color: #666;
 		margin-bottom: 8pt;
 		font-size: 90%;
+	}
+	.section p {
+		font-size: 11pt;
+		color: #666;
+		/*max-width: 300pt;*/
+		float: left;
+		min-width: 168pt;
+
 	}
 
 @media print {
@@ -69,13 +73,14 @@
 
 .section.skillsets {
 }
-	.section.skillsets .column {
-		float: left;
+	.section.skillsets ul li {
+		line-height: 14pt;
+		margin: 2pt 0;
 	}
 	.section.skillsets .sub-section {
-		float: left;
 		margin: 0 4pt;
 		padding: 12pt;
+		max-width: 300pt;
 		min-width: 168pt;
 	}
 

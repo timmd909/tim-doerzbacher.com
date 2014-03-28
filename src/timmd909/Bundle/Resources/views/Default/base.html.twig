@@ -4,6 +4,10 @@
 <link type="text/css" rel="stylesheet" href="{{ asset('bundles/timdoerzbacher/css/common.css') }}" />
 <meta name="viewport" content="width=device-width" />
 
+{% block javascript %}
+<script type="text/javascript" src="{{ asset('bundles/timdoerzbacher/js/jquery-1.11.0.min.js') }}"></script>
+{% endblock %}
+
 {% block stylesheets %}
 <link type="text/css" rel="stylesheet" media="screen and (max-width: 800px)" href="{{ asset('bundles/timdoerzbacher/css/mobile.css') }}" />
 <link type="text/css" rel="stylesheet" media="screen and (min-width: 801px)" href="{{ asset('bundles/timdoerzbacher/css/desktop.css') }}" />
