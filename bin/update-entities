@@ -2,7 +2,7 @@
 
 pushd "`dirname $0`/.." > /dev/null
 
-for CLASS in Skill Link LinkCategory Experience
+for CLASS in Skill Link LinkCategory Experience ExperiencePoint
 do
 	TABLE="`basename \"$CLASS\" | sed 's/.php//g'`"
 	./app/console  generate:doctrine:entities --no-backup "timmd909/Bundle/Entity/$TABLE"
