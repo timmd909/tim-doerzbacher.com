@@ -16,14 +16,15 @@ resume:
       - { name: "Bash"        , level: 4 }
       - { name: "C/C++"       , level: 3 }
       - { name: "CSS"         , level: 5 }
-      - { name: "Erlang"      , level: 3 }
+      - { name: "Erlang"      , level: 2 }
       - { name: "HTML"        , level: 5 }
       - { name: "JavaScript"  , level: 5 }
       - { name: "MXML"        , level: 4 }
       - { name: "MySQL"       , level: 5 }
-      - { name: "OpenGL"      , level: 2 }
       - { name: "PHP"         , level: 5 }
+      - { name: "Python"      , level: 2 }
       - { name: "Yaml"        , level: 5 }
+      - { name: "Klingon"     , level: 0 }
 
   tools:
     title: "Software & Tools"
@@ -63,6 +64,20 @@ resume:
   experience:
     title: "Work Experience"
     entries:
+      - name: "PiCon Web Design & Marketing"
+        description: "Subcontractor"
+        responsibilities:
+          - description:
+              Developed a web-based commercial employment application designed
+              for the trucking industry, yet generalized enough to be
+              used by any industry.
+          - description:
+              Rewritten .NET and Microsoft based websites for use
+              in LAMP servers.
+        duration:
+          start: "2007"
+          end:
+
       - name: "Walking Thumbs"
         description: "Lead Server Developer"
         responsibilities:
@@ -110,17 +125,3 @@ resume:
         duration:
           start: "2008"
           end: "2013"
-
-      - name: "PiCon Web Design & Marketing"
-        description: "Subcontractor"
-        responsibilities:
-          - description:
-              Developed a web-based commercial employment application designed
-              for the trucking industry, yet generalized enough to be
-              used by any industry.
-          - description:
-              Rewritten .NET and Microsoft based websites for use
-              in LAMP servers.
-        duration:
-          start: "2007"
-          end:

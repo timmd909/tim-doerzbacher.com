@@ -77,11 +77,33 @@
 		line-height: 14pt;
 		margin: 2pt 0;
 	}
+		.section.skillsets .level {
+			float: right;
+			overflow: hidden;
+			width: 28pt;
+			height: 14pt;
+			text-indent: -999em;
+			margin: 0 0 0 8pt;
+			position: relative;
+		}
+			.section.skillsets .level img {
+				width: 28pt; height: 84pt;
+				position: absolute;
+				top: 0; left: 0;
+			}
+				.section.skillsets .level0 img { top: 0; }
+				.section.skillsets .level1 img { top: -14pt; }
+				.section.skillsets .level2 img { top: -28pt; }
+				.section.skillsets .level3 img { top: -42pt; }
+				.section.skillsets .level4 img { top: -56pt; }
+				.section.skillsets .level5 img { top: -70pt; }
+
 	.section.skillsets .sub-section {
 		margin: 0 4pt;
 		padding: 12pt;
-		max-width: 300pt;
-		min-width: 168pt;
+		/*max-width: 300pt;
+		min-width: 168pt;*/
+		width: 240px;
 	}
 
 .section .experience {
