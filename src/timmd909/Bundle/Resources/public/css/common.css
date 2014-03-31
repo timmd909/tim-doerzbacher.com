@@ -22,7 +22,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	color: #666;
-	margin: 10pt 0;
+	margin: 0 0 10pt 0;
 	font-weight: normal;
 }
 
@@ -90,7 +90,7 @@ ul {
 /* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */
 
 p {
-	margin: 14pt 0;
+	margin: 2pt 0 4pt 0;
 	font: inherit;
 	color: inherit;
 }
@@ -211,4 +211,8 @@ footer {
 
 .clear-both {
 	clear: both;
+}
+
+span.spam-prevention {
+	display: none;
 }

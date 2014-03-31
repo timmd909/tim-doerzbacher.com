@@ -44,9 +44,11 @@
 		font-size: 11pt;
 		color: #666;
 		/*max-width: 300pt;*/
-		float: left;
 		min-width: 168pt;
 
+	}
+	.section p:first-of-type {
+		margin-top: 0;
 	}
 
 @media print {
@@ -67,6 +69,46 @@
 	}
 	.section .sub-section ul {
 		margin: 0;
+	}
+
+	.section p {
+		font-size: 8pt;
+		line-height: 10pt;
+		color: #666;
+	}
+}
+
+
+.section.contact-info {
+
+}
+	.section.contact-info p {
+		margin: 0 0 4pt 0;
+		line-height: 20pt;
+	}
+	.section.contact-info div {
+		min-width: 300px;
+		/*margin-bottom: 8pt;*/
+	}
+	.section.contact-info .address {
+		float: left;
+	}
+	.section.contact-info .email-address {
+		float: left;
+	}
+	.section.contact-info .phone-number {
+		float: left;
+	}
+
+@media print {
+	.section.contact-info {
+		padding-bottom: 0;
+		height: 48pt;
+	}
+	.section.contact-info p {
+		margin: 0;
+		line-height: 10pt;
+		font-size: 9pt;
 	}
 }
 

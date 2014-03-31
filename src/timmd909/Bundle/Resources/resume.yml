@@ -1,8 +1,5 @@
 resume:
-  headline: "Self taught and experience developer seeks difficult challenges"
-
-  phone_number: "1-412-758-0179"
-
+  # This isn't used in the actual resume template, but for completeness
   address:
     street: "710 E. Shady Drive, Apt 6"
     city: "Pittsburgh"
@@ -38,6 +35,7 @@ resume:
       - { name: "MediaWiki"          , level: 3 }
       - { name: "Nagios"             , level: 3 }
       - { name: "Phabricator"        , level: 3 }
+      - { name: "PHPUnit"            , level: 4 }
       - { name: "Subversion"         , level: 5 }
       - { name: "Symfony2"           , level: 4 }
       - { name: "Thrift"             , level: 4 }
@@ -74,12 +72,15 @@ resume:
           - description:
               Rewritten .NET and Microsoft based websites for use
               in LAMP servers.
+          - description:
+              Lead developer on a project to catalog and digitalize 300,000+
+              documents from a 19th century scholar.
         duration:
           start: "2007"
           end:
 
       - name: "Walking Thumbs"
-        description: "Lead Server Developer"
+        description: "Server Developer"
         responsibilities:
           - description:
               Integrating PHP and ejabberd based nodes and their respective
@@ -93,17 +94,36 @@ resume:
                 data stored unecrypted on the servers.
               - Normalized email and phone numbers to prevent false positives
                 and maximize matches.
-          - description: Setup monitoring system with Nagios.
+          - description:
+              Improved and expanded automated testing suite; drastically
+              increasing the code coverage while at the same time drastically
+              reducing the execution time.
           - description:
               Handled all server related tasks to support several
               other developers working on the Android and iOS clients.
+            notes:
+              - Including setting up Nagios to handle monitoring of
+                server nodes, upgrading nodes, and creating new nodes.
+          - description:
+              Built automated server build scripts for use by the rest of
+              the team, decreasing the server-side ramp up time for new app
+              developers from several days to a couple hours.
+          - description:
+              Handled overseeing implementing company websites
         duration:
           start: "2013"
           end: "2014"
 
       - name: "Kb Port"
-        description: "Senior Web Developer"
+        description: "Server & Web Developer"
         responsibilities:
+          - description:
+              Handled UI design and implemention on several major software
+              revisions over half a decade.
+            notes:
+              - Utilized HTML5/CSS3 for maximum compatibility in the future.
+              - Previous versions were hacked to work on Internet Explorer
+                with a proprietary Active X control.
           - description:
               Developed RAID-based archival system for compiling
               video sessions from all network connected
