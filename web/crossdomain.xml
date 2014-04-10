@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE cross-domain-policy 
+<!DOCTYPE cross-domain-policy
   SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
 <cross-domain-policy>
- <site-control permitted-cross-domain-policies="master-only"/>
-  <allow-access-from to-ports="*" domain="*" />
+  <site-control permitted-cross-domain-policies="all"/>
+  <!-- <site-control permitted-cross-domain-policies="master-only"/> -->
+  <!-- <allow-access-from domain="*" to-ports="*" /> -->
+  <allow-access-from to-ports="80" secure="false" domain="*" />
+  <allow-http-request-headers-from domain="*" secure="false" headers="*"/>
 </cross-domain-policy>
