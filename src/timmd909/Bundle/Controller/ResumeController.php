@@ -23,6 +23,13 @@ class ResumeController extends ControllerBase
 		$options['languages']         = $this->languageRepository->findAll();
 		$options['operating_systems'] = $this->operatingSystemRepository->findAll();
 
+		$keyValues = $this->keyValueRepository->findAll();
+		$options['key_values'] = array();
+		foreach ($keyValues as $currKeyValue) {
+			$options['key_values'][$currKeyValue->getKey()] =
+				$currKeyValue->getValue();
+		}
+
 		return $this->render($template, $options);
 	}
 

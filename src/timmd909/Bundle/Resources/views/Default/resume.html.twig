@@ -16,7 +16,7 @@
 {# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
 
 {% block headline %}
-	Exuberant, Ethusiastic, and Ecclectic Programmer Seeks Challenges
+	{{ key_values.headline }}
 {% endblock %}
 
 {# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
@@ -60,28 +60,21 @@
 {% block content %}
 
 	<div class="section intro">
-		<p>I truly am looking for a challenge. Working on solving problems
-			in general (and computers in particular) is what I'm on this earth for.
-			To that end, I seek only to further my knowledge and abilities until
-			I'm the ultimate coder.  
+		<p>{{ key_values.introcopy }}</p>
 	</div>
 	
 	<div class="section contact-info">{% spaceless %}
 		<h2>Contact Info</h2>
 		<div class="container">
 			<div class="phone-number">
-				<p>1 &bull; 412 &bull;
-					<span class="spam-prevention">spam isn't welcome</span>
-					758 &bull; 0179</p>
+				<p>{{ key_values.phone_number | raw }}</p>
 			</div>
 			<div class="address">
-				<p>710 E. Shady Drive, Apt. 6</p>
-				<p>Pittsburgh PA 15228</p>
+				<p>{{ key_values.address }}</p>
+				<p>{{ key_values.city }}, {{ key_values.state}} {{ key_values.zip}}</p>
 			</div>
 			<div class="email-address">
-				<p>tim@<span class="spam-prevention">JavaScript is turned off.
-						Turn it on... or browse the source code to find my
-						email address :-)</span>
+				<p>{{ key_values.email | raw }}</span>
 				<span class="domain"></span></p>
 			</div>
 		</div>
@@ -98,7 +91,6 @@
 			comfortable using that on a day to day basis due to the high
 			risk of self-defenestration after prolonged exposure. 
 		</p>
-		
 		
 		<div class="container">
 			<div class="sub-section">
@@ -141,7 +133,15 @@
 		{% endfor %}
 	</div>
 		
-		
+	<div class="section education">
+		<h2>Education</h2>
+		<div class="experience">
+			<div class="duration">2005 &mdash; 2009 </div>
+			<h3>Art Institute of Pittsburgh</h3>
+			<div class="description">Graduated with Bachelor degree in Graphic Design</div>
+		</div> 
+	</div>
+	
 	<div class="section references">
 		<h2>References</h2>
 		References available upon request.

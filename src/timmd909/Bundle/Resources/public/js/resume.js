@@ -11,7 +11,5 @@ $(function() {
 		itemSelector: 'div'
 	});
 	
-	
 	$('.spam-prevention').remove();
-	$('.email-address .domain').html('tim-doerzbacher.com');
 });
