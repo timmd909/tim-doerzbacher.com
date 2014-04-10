@@ -4,37 +4,32 @@
  *
  */
 
-namespace timmd909\Bundle\DataFixtures;
+namespace timmd909\Bundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use timmd909\Bundle\DataFixtures\FixtureBase;
 use timmd909\Bundle\Entity\Experience;
 use timmd909\Bundle\Entity\ExperiencePoint;
 use timmd909\Bundle\Entity\Language;
 use timmd909\Bundle\Entity\OperatingSystem;
 use timmd909\Bundle\Entity\Skill;
 use timmd909\Bundle\Entity\Tool;
+use timmd909\Bundle\Entity\KeyValue;
 
-class LoadResumeData implements FixtureInterface
+class LoadResumeData extends FixtureBase
 {
-	/// Relative filename
-	const REL_FILENAME = './../../Resources/resume.yml';
-
 	public function load(ObjectManager $manager)
 	{
-		$yamlFilename = dirname(__FILE__).'/'.self::REL_FILENAME;
-		$yaml = \yaml_parse_file($yamlFilename);
-
-		if ($yaml === FALSE) {
-			error_log("Unable to load '$yamlFilename'");
-			return;
-		}
+		$yaml = $this->loadYamlResource('resume.yml');
+		if (!$yaml) return;
 
 		$this->loadLanguages  ($manager, $yaml['resume']['languages'] );
 		$this->loadTools      ($manager, $yaml['resume']['tools']     );
 		$this->loadSkills     ($manager, $yaml['resume']['skills']    );
 		$this->loadExperiences($manager, $yaml['resume']['experience']);
 		$this->loadOSes       ($manager, $yaml['resume']['operating_systems']);
+		$this->loadKeyValues  ($manager, $yaml['resume']['metadata']);
 
 		// we're all done, save our progress :-)
 		$manager->flush();
@@ -140,7 +135,15 @@ class LoadResumeData implements FixtureInterface
 		}
 	}
 
-
+	protected function loadKeyValues(ObjectManager $manager, array $keyValues)
+	{
+		foreach ($keyValues as $currKeyValue) {
+			$entity = new KeyValue();
+			$entity->setKey($currKeyValue['key']);
+			$entity->setValue($currKeyValue['value']);
+			$manager->persist($entity);
+		}
+	}
 
 } // class
 
