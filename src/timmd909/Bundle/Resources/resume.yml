@@ -1,10 +1,27 @@
 resume:
-  # This isn't used in the actual resume template, but for completeness
-  address:
-    street: "710 E. Shady Drive, Apt 6"
-    city: "Pittsburgh"
-    state: "Pennsylvanian"
-    zip: "15228"
+  metadata:
+    - key:   phone_number
+      value: '1 • 412 • 758 •<span class="spam-prevention">no bad phone calls</span>0179'
+    - key:   email
+      value: 'tim@<span class="spam-prevention">no bad emails</span>tim-doerzbacher.com'
+    - key:   address
+      value: "710 E. Shady Drive, Apt 6"
+    - key:   city
+      value: Pittsburgh
+    - key:   state
+      value: Pennsylvania
+    - key:   zip
+      value: "15228"
+
+    - key:   headline
+      value: "Software Engineer"
+    - key:   introcopy
+      value:
+        I've developed a skill set varied enough to take any web-based
+        idea from initial concept, to design, and all the way through
+        development to the finished implementation. I'm most comfortable
+        with open source software. I seek only to further my knowledge and
+        abilities until I'm the best possible programmer.
 
   languages:
     title: "Languages"
@@ -17,7 +34,7 @@ resume:
       - { name: "HTML"        , level: 5 }
       - { name: "JavaScript"  , level: 5 }
       - { name: "MXML"        , level: 4 }
-      - { name: "MySQL"       , level: 5 }
+      - { name: "SQL"         , level: 5 }
       - { name: "PHP"         , level: 5 }
       - { name: "Python"      , level: 2 }
       - { name: "Yaml"        , level: 5 }
@@ -26,20 +43,23 @@ resume:
   tools:
     title: "Software & Tools"
     entries:
-      - { name: "Apache"             , level: 4 }
-      - { name: "Eclipse"            , level: 5 }
-      - { name: "ejabberd"           , level: 3 }
-      - { name: "Facebook APIs"      , level: 3 }
-      - { name: "Git"                , level: 4 }
-      - { name: "jQuery"             , level: 5 }
-      - { name: "MediaWiki"          , level: 3 }
-      - { name: "Nagios"             , level: 3 }
-      - { name: "Phabricator"        , level: 3 }
-      - { name: "PHPUnit"            , level: 4 }
-      - { name: "Subversion"         , level: 5 }
-      - { name: "Symfony2"           , level: 4 }
-      - { name: "Thrift"             , level: 4 }
-      - { name: "WordPress"          , level: 3 }
+      - { name: "Adobe Creative Suite", level: 5 }
+      - { name: "Apache"              , level: 4 }
+      - { name: "Eclipse"             , level: 5 }
+      - { name: "ejabberd"            , level: 3 }
+      - { name: "Facebook APIs"       , level: 3 }
+      - { name: "Git"                 , level: 4 }
+      - { name: "jQuery"              , level: 5 }
+      - { name: "MediaWiki"           , level: 3 }
+      - { name: "MySQL/MariaDB"       , level: 5 }
+      - { name: "Nagios"              , level: 3 }
+      - { name: "Phabricator"         , level: 3 }
+      - { name: "PHPUnit"             , level: 4 }
+      - { name: "PostgreSQL"          , level: 3 }
+      - { name: "Subversion"          , level: 5 }
+      - { name: "Symfony2"            , level: 4 }
+      - { name: "Thrift"              , level: 4 }
+      - { name: "WordPress"           , level: 3 }
 
   skills:
     title: "Skills"
@@ -141,6 +161,15 @@ resume:
                 in the field to facilitate up-selling new products and features.
               - The system interfaced with copy protection code on the systems
                 to prevent unauthorized cloning.
+          - description:
+              Designed a new video package format to allow exchange of data
+              between the company's various products.
+            notes:
+              - Designed to be easily extendable at future times to allow
+                any type of metadata or otherwise to be added without
+                breaking backwards compatibility.
+              - Utilized OSS tools for maximum inter-compatibility
+                on different platforms.
 
         duration:
           start: "2008"
