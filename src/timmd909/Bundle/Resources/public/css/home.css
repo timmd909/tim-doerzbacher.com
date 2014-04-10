@@ -1,0 +1,44 @@
+.hello-message {
+	position: relative;
+}
+
+img.me {
+	margin: 0 16px 0 0;
+}
+
+@media screen and (min-width: 600px) {
+	img.me {
+		position: absolute;
+		top: 0; left: 0;
+		width: 200px;
+		height: 200px;
+	}
+
+	.hello-message {
+		padding-left: 220px;
+		min-height: 240px;
+	}
+}
+
+@media screen and (max-width: 599px) and (min-width: 301px) {
+	img.me {
+		float: left;
+		width: 150px; height: 150px;
+	}
+	.hello-message {
+		padding-left: 0;
+	}
+
+}
+
+@media screen and (max-width: 300px) {
+	img.me {
+		float: none;
+		margin: 0 auto;
+		display: block;
+	}
+	.hello-message {
+		padding: none;
+	}
+}
+
