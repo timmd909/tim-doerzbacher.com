@@ -1,0 +1,14 @@
+#!/bin/bash 
+
+pushd "`dirname $0`" > /dev/null
+
+WP_CLI="/usr/local/bin/wp-cli"
+
+cd ../www/
+
+$WP_CLI core update 
+$WP_CLI core update-db
+$WP_CLI plugin update --all 
+
+
+popd > /dev/null
