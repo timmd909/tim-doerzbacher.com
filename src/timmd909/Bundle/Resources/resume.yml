@@ -33,6 +33,7 @@ resume:
       - { name: "Erlang"      , level: 2 }
       - { name: "HTML"        , level: 5 }
       - { name: "JavaScript"  , level: 5 }
+      - { name: "LESS"        , level: 4 }
       - { name: "MXML"        , level: 4 }
       - { name: "SQL"         , level: 5 }
       - { name: "PHP"         , level: 5 }
@@ -48,14 +49,16 @@ resume:
       - { name: "Eclipse"             , level: 5 }
       - { name: "ejabberd"            , level: 3 }
       - { name: "Facebook APIs"       , level: 3 }
-      - { name: "Git"                 , level: 4 }
+      - { name: "Git"                 , level: 5 }
+      - { name: "Grunt"               , level: 5 }
       - { name: "jQuery"              , level: 5 }
       - { name: "MediaWiki"           , level: 3 }
       - { name: "MySQL/MariaDB"       , level: 5 }
       - { name: "Nagios"              , level: 3 }
-      - { name: "Phabricator"         , level: 3 }
       - { name: "PHPUnit"             , level: 4 }
+      - { name: "Phabricator"         , level: 3 }
       - { name: "PostgreSQL"          , level: 3 }
+      - { name: "QUnit"               , level: 4 }
       - { name: "Subversion"          , level: 5 }
       - { name: "Symfony2"            , level: 4 }
       - { name: "Thrift"              , level: 4 }
