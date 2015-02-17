@@ -5,13 +5,13 @@ resume:
     - key:   email
       value: 'tim@<span class="spam-prevention">no bad emails</span>tim-doerzbacher.com'
     - key:   address
-      value: "710 E. Shady Drive, Apt 6"
+      value: "136 North South Drive"
     - key:   city
       value: Pittsburgh
     - key:   state
       value: Pennsylvania
     - key:   zip
-      value: "15228"
+      value: "15237"
 
     - key:   headline
       value: "Software Engineer"
