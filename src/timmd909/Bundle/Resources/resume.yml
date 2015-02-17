@@ -99,6 +99,22 @@ resume:
           start: "2007"
           end:
 
+      - name: "Intermedix"
+        description: "Front End Software Engineer"
+        responsibilities:
+          - description:
+              I handle the release engineering on the team for distributing
+              our product company wide.
+          - description:
+              Our team creates and maintains the shared UI toolkit for all
+              the web-based products that Intermedix offers.
+          - description:
+              I do all the troublesome rebasing and merging for our Git-based
+              feature branch workflow.
+        duration:
+          start: "2014"
+          end:
+
       - name: "Walking Thumbs"
         description: "Server Developer"
         responsibilities:
