@@ -35,7 +35,7 @@ resume:
       - { name: "JavaScript"  , level: 5 }
       - { name: "LESS"        , level: 4 }
       - { name: "MXML"        , level: 4 }
-      - { name: "SQL"         , level: 5 }
+      - { name: "SQL"         , level: 4 }
       - { name: "PHP"         , level: 5 }
       - { name: "Python"      , level: 2 }
       - { name: "Yaml"        , level: 5 }
@@ -46,19 +46,22 @@ resume:
     entries:
       - { name: "Adobe Creative Suite", level: 5 }
       - { name: "Apache"              , level: 4 }
+      - { name: "Bootstrap"           , level: 5 }
       - { name: "Eclipse"             , level: 5 }
       - { name: "ejabberd"            , level: 3 }
       - { name: "Facebook APIs"       , level: 3 }
       - { name: "Git"                 , level: 5 }
       - { name: "Grunt"               , level: 5 }
       - { name: "jQuery"              , level: 5 }
+      - { name: "Jenkins"             , level: 4 }
       - { name: "MediaWiki"           , level: 3 }
+      - { name: "NodeJS"              , level: 4 }
       - { name: "MySQL/MariaDB"       , level: 5 }
       - { name: "Nagios"              , level: 3 }
       - { name: "PHPUnit"             , level: 4 }
       - { name: "Phabricator"         , level: 3 }
       - { name: "PostgreSQL"          , level: 3 }
-      - { name: "QUnit"               , level: 4 }
+      - { name: "QUnit"               , level: 5 }
       - { name: "Subversion"          , level: 5 }
       - { name: "Symfony2"            , level: 4 }
       - { name: "Thrift"              , level: 4 }
@@ -85,6 +88,36 @@ resume:
   experience:
     title: "Work Experience"
     entries:
+      - name: "Intermedix"
+        description: "Front End Software Engineer"
+        responsibilities:
+          - description:
+              Took over release engineering and devops responsibilities to streamline
+              releases and development
+            notes:
+              - Updated and re-designed the Grunt project file into a modular
+                and more easy to maintain structure
+              - Integrated with Jenkins and Stash to improve our workflow by preventing
+                bad merges through expanded automated tests
+              - Built and maintain the Jenkins build slave
+          - description:
+              Lead development of new major release of our product
+            notes:
+              - The original architecture was of a large, monolithic package which
+                frequently caused regressions downstream
+              - Divaricated the package in many smaller, more focused packages to
+                allow downstream implementers more flexibility with upgrading and
+                feature sets
+          - description:
+              Designed and implemented visual regression tests to improve
+              continuous integration
+            notes:
+              - The testing framework is shared, making any updates or the testing
+                framework to be affected immediately in all existing and new modules
+        duration:
+          start: "2014"
+          end:
+
       - name: "PiCon Web Design & Marketing"
         description: "Subcontractor"
         responsibilities:
@@ -100,23 +133,7 @@ resume:
               documents from a 19th century scholar.
         duration:
           start: "2007"
-          end:
-
-      - name: "Intermedix"
-        description: "Front End Software Engineer"
-        responsibilities:
-          - description:
-              I handle the release engineering on the team for distributing
-              our product company wide.
-          - description:
-              Our team creates and maintains the shared UI toolkit for all
-              the web-based products that Intermedix offers.
-          - description:
-              I do all the troublesome rebasing and merging for our Git-based
-              feature branch workflow.
-        duration:
-          start: "2014"
-          end:
+          end: "2015"
 
       - name: "Walking Thumbs"
         description: "Server Developer"
