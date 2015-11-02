@@ -2,8 +2,18 @@
 // Main styles for tim-doerzbacher.com
 //
 
+@import (reference) "../../../vendor/twbs/bootstrap/less/bootstrap.less";
 
 body {
 	// leave enough padding for the navbar at top
 	padding-top: 50px;
+}
+
+.navbar-main {
+	.navbar-default();
+
+	background-color: #f9f9f9;
+	border: none;
+	box-shadow: 0 0 10px @gray-light;
+	// border-bottom: 1px solid @gray-light;
 }

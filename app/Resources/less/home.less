@@ -1,6 +1,7 @@
 @import (reference) "../../../vendor/twbs/bootstrap/less/variables.less";
 @import (reference) "../../../vendor/twbs/bootstrap/less/mixins.less";
 @import (reference) "../../../vendor/twbs/bootstrap/less/utilities.less";
+@import (reference) "../../../vendor/twbs/bootstrap/less/type.less";
 
 
 main section {
@@ -14,26 +15,34 @@ main hr {
 	border-bottom: 1px solid @gray-lighter;
 }
 
-.section-header {
+.section_header {
 	margin: 0;
 }
 
-
-
-.section-description {
-	@media (max-width: @screen-md-min) {
-		margin-top: 1em;
+.section_description {
+	@media (min-width: @screen-md-min) {
+		margin-top: 0;
 	}
+	@media (max-width: @screen-md-min) {
+		margin-top: 2em;
+	}
+	margin-bottom: 2em;
 }
 
-.section-title {
+.section_title {
 	margin-top: 6pt;
 	padding-left: 44pt;
 }
 
-.section-icon {
+.section_icon {
 	.pull-left();
 
 	width: 36pt;
 	height: 36pt;
+}
+
+.section_more-info {
+	.text-center;
+
+	margin-top: 2em;
 }
