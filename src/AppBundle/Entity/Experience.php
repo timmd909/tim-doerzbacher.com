@@ -4,7 +4,7 @@
  *
  */
 
-namespace timmd909\Bundle\Entity;
+namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -191,10 +191,10 @@ class Experience
 		/**
 		 * Add experiencePoints
 		 *
-		 * @param \timmd909\Bundle\Entity\ExperiencePoint $experiencePoints
+		 * @param \AppBundle\Entity\ExperiencePoint $experiencePoints
 		 * @return Experience
 		 */
-		public function addExperiencePoint(\timmd909\Bundle\Entity\ExperiencePoint $experiencePoints)
+		public function addExperiencePoint(\AppBundle\Entity\ExperiencePoint $experiencePoints)
 		{
 			$this->experiencePoints[] = $experiencePoints;
 
@@ -204,9 +204,9 @@ class Experience
 		/**
 		 * Remove experiencePoints
 		 *
-		 * @param \timmd909\Bundle\Entity\ExperiencePoint $experiencePoints
+		 * @param \AppBundle\Entity\ExperiencePoint $experiencePoints
 		 */
-		public function removeExperiencePoint(\timmd909\Bundle\Entity\ExperiencePoint $experiencePoints)
+		public function removeExperiencePoint(\AppBundle\Entity\ExperiencePoint $experiencePoints)
 		{
 			$this->experiencePoints->removeElement($experiencePoints);
 		}

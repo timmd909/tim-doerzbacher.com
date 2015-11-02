@@ -4,7 +4,7 @@
  *
  */
 
-namespace timmd909\Bundle\Entity;
+namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -115,10 +115,10 @@ class LinkCategory
 	/**
 	 * Add links
 	 *
-	 * @param \timmd909\Bundle\Entity\Link $links
+	 * @param \AppBundle\Entity\Link $links
 	 * @return LinkCategory
 	 */
-	public function addLink(\timmd909\Bundle\Entity\Link $links)
+	public function addLink(\AppBundle\Entity\Link $links)
 	{
 		$this->links[] = $links;
 
@@ -128,9 +128,9 @@ class LinkCategory
 	/**
 	 * Remove links
 	 *
-	 * @param \timmd909\Bundle\Entity\Link $links
+	 * @param \AppBundle\Entity\Link $links
 	 */
-	public function removeLink(\timmd909\Bundle\Entity\Link $links)
+	public function removeLink(\AppBundle\Entity\Link $links)
 	{
 		$this->links->removeElement($links);
 	}

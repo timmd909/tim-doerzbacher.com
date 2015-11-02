@@ -4,7 +4,7 @@
  *
  */
 
-namespace timmd909\Bundle\Entity;
+namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -92,10 +92,10 @@ class Link
 	/**
 	 * Set category
 	 *
-	 * @param \timmd909\Bundle\Entity\LinkCategory $linkCategory
+	 * @param \AppBundle\Entity\LinkCategory $linkCategory
 	 * @return Link
 	 */
-	public function setCategory(\timmd909\Bundle\Entity\LinkCategory $linkCategory = null)
+	public function setCategory(\AppBundle\Entity\LinkCategory $linkCategory = null)
 	{
 		$this->category = $linkCategory;
 
@@ -105,7 +105,7 @@ class Link
 	/**
 	 * Get category
 	 *
-	 * @return \timmd909\Bundle\Entity\LinkCategory
+	 * @return \AppBundle\Entity\LinkCategory
 	 */
 	public function getCategory()
 	{

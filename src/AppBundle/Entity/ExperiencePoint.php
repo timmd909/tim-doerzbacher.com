@@ -4,7 +4,7 @@
  *
  */
 
-namespace timmd909\Bundle\Entity;
+namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -102,10 +102,10 @@ class ExperiencePoint
 	/**
 	 * Set experience
 	 *
-	 * @param \timmd909\Bundle\Entity\Experience $experience
+	 * @param \AppBundle\Entity\Experience $experience
 	 * @return ExperiencePoint
 	 */
-	public function setExperience(\timmd909\Bundle\Entity\Experience $experience = null)
+	public function setExperience(\AppBundle\Entity\Experience $experience = null)
 	{
 		$this->experience = $experience;
 
@@ -115,7 +115,7 @@ class ExperiencePoint
 	/**
 	 * Get experience
 	 *
-	 * @return \timmd909\Bundle\Entity\Experience
+	 * @return \AppBundle\Entity\Experience
 	 */
 	public function getExperience()
 	{
@@ -127,10 +127,10 @@ class ExperiencePoint
 	/**
 	 * Add children
 	 *
-	 * @param \timmd909\Bundle\Entity\ExperiencePoint $children
+	 * @param \AppBundle\Entity\ExperiencePoint $children
 	 * @return ExperiencePoint
 	 */
-	public function addChild(\timmd909\Bundle\Entity\ExperiencePoint $children)
+	public function addChild(\AppBundle\Entity\ExperiencePoint $children)
 	{
 		$this->children[] = $children;
 
@@ -140,9 +140,9 @@ class ExperiencePoint
 	/**
 	 * Remove children
 	 *
-	 * @param \timmd909\Bundle\Entity\ExperiencePoint $children
+	 * @param \AppBundle\Entity\ExperiencePoint $children
 	 */
-	public function removeChild(\timmd909\Bundle\Entity\ExperiencePoint $children)
+	public function removeChild(\AppBundle\Entity\ExperiencePoint $children)
 	{
 		$this->children->removeElement($children);
 	}
@@ -162,10 +162,10 @@ class ExperiencePoint
 	/**
 	 * Set parent
 	 *
-	 * @param \timmd909\Bundle\Entity\ExperiencePoint $parent
+	 * @param \AppBundle\Entity\ExperiencePoint $parent
 	 * @return ExperiencePoint
 	 */
-	public function setParent(\timmd909\Bundle\Entity\ExperiencePoint $parent)
+	public function setParent(\AppBundle\Entity\ExperiencePoint $parent)
 	{
 		$this->parent = $parent;
 
@@ -175,7 +175,7 @@ class ExperiencePoint
 	/**
 	 * Get parent
 	 *
-	 * @return \timmd909\Bundle\Entity\ExperiencePoint
+	 * @return \AppBundle\Entity\ExperiencePoint
 	 */
 	public function getParent()
 	{
