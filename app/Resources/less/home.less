@@ -1,0 +1,39 @@
+@import (reference) "../../../vendor/twbs/bootstrap/less/variables.less";
+@import (reference) "../../../vendor/twbs/bootstrap/less/mixins.less";
+@import (reference) "../../../vendor/twbs/bootstrap/less/utilities.less";
+
+
+main section {
+	padding: 3em 0;
+}
+
+main hr {
+	display: block;
+	height: 1px;
+	margin: 0 10em;
+	border-bottom: 1px solid @gray-lighter;
+}
+
+.section-header {
+	margin: 0;
+}
+
+
+
+.section-description {
+	@media (max-width: @screen-md-min) {
+		margin-top: 1em;
+	}
+}
+
+.section-title {
+	margin-top: 6pt;
+	padding-left: 44pt;
+}
+
+.section-icon {
+	.pull-left();
+
+	width: 36pt;
+	height: 36pt;
+}

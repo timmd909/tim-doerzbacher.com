@@ -1,5 +1,10 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
+
 {% block body %}
 <div class="jumbotron">
 	<div class="container">
@@ -16,11 +21,99 @@
 			mundane scenarios.
 		</p>
 
-		<p><a class="btn btn-primary btn-lg"
-			href="{{ path('pages', {'page': 'blog'}) }}" role="button">Learn more</a></p>
-
 	</div>
 </div>
+
+<main>
+
+	<div class="container">
+		<section class="row">
+			<div class="col-xs-12 col-md-5">
+				<header class="section-header row">
+					<img class="section-icon" src="{{ asset('img/icons/catpoo.svg') }}">
+					<h2 class="section-title">
+						Cat Antagonizing Tactical Platform of&nbsp;Oppression
+					</h2>
+				</header>
+			</div>
+
+			<div class="col-xs-12 col-md-7">
+				<p>
+					Back when I was a young kid, I always wanted to build a robot. I never
+					managed to talk my parents into giving me thousands and thousands of
+					dollars to fund my research. It was a difficult time.
+				</p>
+
+				<p>
+					Fast forward 20 years, I have a career and the necessary income. I also
+					have cats. The decision was made before I even thought of what to do:
+					build a device to terrorize my cats.
+				</p>
+
+				<p>
+					<a class="btn btn-primary btn-lg"
+						href="catpoo" role="button">Learn more</a>
+				</p>
+
+			</div>
+
+		</section>
+
+		<hr>
+
+		<section class="row">
+			<div class="col-xs-12 col-md-5">
+				<img class="section-icon" src="{{ asset('img/icons/resume.svg') }}">
+				<h2 class="section-title">R&eacute;sum&eacute;</h2>
+			</div>
+
+			<div class="section-description col-xs-12 col-md-7">
+				<p>
+					Whenever someone wants to know something about me, I'm tempted to provide
+					this link...
+				</p>
+
+				<p>
+					Whether you found my page on LinkedIn or <a href="#joke">OkCupid</a>, we
+					all know this is why you're here.
+				</p>
+
+				<p>
+					<a class="btn btn-primary btn-lg"
+						href="{{ path('resume') }}" role="button">Learn more</a>
+				</p>
+			</div>
+
+		</section>
+
+		<hr>
+
+		<section class="row">
+			<div class="col-xs-12 col-md-5">
+				<img class="section-icon" src="{{ asset('img/icons/artwork.svg') }}">
+				<h2 class="section-title">Artwork</h2>
+			</div>
+
+			<div class="col-xs-12 col-md-7">
+				<p>
+					I went to art school because I wanted to make video games. I wanted to
+					do it all from the models or the engine.
+				</p>
+
+				<p>
+					Now I occasionally make artwork to try to justify the student loan.
+				</p>
+
+				<p>
+					<a class="btn btn-primary btn-lg"
+						href="artwork" role="button">Learn more</a>
+				</p>
+			</div>
+
+		</section>
+	</div>
+
+</main>
 
 {% endblock %}
 

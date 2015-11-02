@@ -1,6 +1,7 @@
 'use strict';
 
 var FILES = {
+	'web/css/home.css': 'app/Resources/less/home.less',
 	'web/css/style.css': 'app/Resources/less/style.less',
 	'web/css/bootstrap.css': 'app/Resources/less/bootstrap.less'
 };
