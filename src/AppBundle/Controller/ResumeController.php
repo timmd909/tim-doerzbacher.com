@@ -3,7 +3,7 @@
  * @author Tim Doerzbacher <tim@tim-doerzbacher.com>
  */
 
-namespace timmd909\Bundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -15,7 +15,6 @@ class ResumeController extends ControllerBase
 			'page' => 'resume',
 			'pages' => $this->getDefaultPages()
 		);
-		$template = $this->getTemplateFilename('resume');
 
 		$options['experiences']       = $this->experienceRepository->findAll();
 		$options['skills']            = $this->skillRepository->findAll();
@@ -30,6 +29,7 @@ class ResumeController extends ControllerBase
 				$currKeyValue->getValue();
 		}
 
+		$template = $this->getTemplateFilename('resume');
 		return $this->render($template, $options);
 	}
 

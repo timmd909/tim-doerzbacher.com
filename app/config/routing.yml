@@ -2,6 +2,15 @@
 #  resource: "@AppBundle/Controller/"
 #  type:     annotation
 
-tim_doerzbacher_pages:
+
+links:
+  pattern:  /links
+  defaults: { _controller: AppBundle:Link:link}
+
+resume:
+  pattern:  /resume
+  defaults: { _controller: AppBundle:Resume:resume}
+
+pages:
   pattern:  /{page}
   defaults: { _controller: AppBundle:Default:index, page: "home" }

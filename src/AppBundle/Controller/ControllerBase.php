@@ -28,7 +28,7 @@ class ControllerBase extends Controller
 
 	protected function getDefaultPages()
 	{
-		return array('home','blog', 'resume', 'links');
+		return array('home', 'blog', 'resume', 'links');
 	}
 
 	public function __get($variable)
@@ -40,7 +40,6 @@ class ControllerBase extends Controller
 			// ... more in the future?
 		} // switch
 
-
 		if (strrpos($variable, 'Repository') !== FALSE) {
 			$repository = '\\AppBundle\\Entity\\' . ucfirst(
 				substr($variable, 0,
@@ -49,7 +48,6 @@ class ControllerBase extends Controller
 			);
 			return $this->getEntityManager()->getRepository($repository);
 		}
-
 
 		// couldn't find a match, getting outta here
 		throw \Exception("Couldn't find '$variable' in ".__CLASS__);

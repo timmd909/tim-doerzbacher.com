@@ -27,6 +27,7 @@ class DefaultController extends ControllerBase
 			$template = sprintf('default/%s.html.twig', $page);
 			return $this->render($template, array(
 				'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+				'available_pages' => $this->getDefaultPages(),
 				'page' => $page
 			));
 		}

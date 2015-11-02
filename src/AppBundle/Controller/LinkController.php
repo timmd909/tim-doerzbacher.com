@@ -4,7 +4,7 @@
  *
  */
 
-namespace timmd909\Bundle\Controller;
+namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -16,7 +16,6 @@ class LinkController extends ControllerBase
 			'page' => 'links',
 			'pages' => $this->getDefaultPages()
 		);
-		$template = $this->getTemplateFilename('links');
 
 		// load all the categories from the database
 		$linkCategories = $this->linkCategoryRepository->findAll(array('weight'=>'asc'));
@@ -41,6 +40,7 @@ class LinkController extends ControllerBase
 			$options['links'][] = $tempCategory;
 		}
 
+		$template = $this->getTemplateFilename('resume');
 		return $this->render($template, $options);
 	}
 
