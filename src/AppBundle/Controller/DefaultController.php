@@ -22,11 +22,14 @@ class DefaultController extends ControllerBase
 				return $this->redirect('http://blog.tim-doerzbacher.com/category/robotics/catpoo/');
 		}
 
-
 		// replace this example code with whatever you need
-		return $this->render('default/index.html.twig', array(
-			'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
-			'page' => $page
-		));
+		if (FALSE !== preg_match('/[a-z0-9]/', $page)) {
+			$template = sprintf('default/%s.html.twig', $page);
+			return $this->render($template, array(
+				'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+				'page' => $page
+			));
+		}
+
 	}
 }

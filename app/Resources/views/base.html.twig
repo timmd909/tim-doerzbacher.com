@@ -9,27 +9,54 @@
 
 		<!-- Stylesheet(s) -->
 		{% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
 			<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 		{% endblock %}
 		<!-- / Stylesheet(s) -->
 
 		<!-- Favicon info -->
-		<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+			<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 		<!-- / Favicon info -->
 	</head>
 	<body>
+		{% block header %}
 		<header>
-			<h1>{% block header %}
-				{{ page | capitalize }}
-			{% endblock %}</h1>
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
 
-			<nav>{% block navbar %}
-				<ul>
-					<li>Hi there</li>
-				</ul>
-			{% endblock %}</nav>
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="{{ path('tim_doerzbacher_pages') }}">tim-doerzbacher.com</a>
+					</div>
+
+					<div class="collapse navbar-collapse" id="main-navigation">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Resume</a></li>
+							<li><a href="#">Links</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 		</header>
+		{% endblock %}
+
 		{% block body %}{% endblock %}
-		{% block scripts %}{% endblock %}
+		{% block scripts %}
+			{% if app.environment == 'dev' %}
+				<script src="{{ asset('js/jquery.js') }}"></script>
+				<script src="{{ asset('js/bootstrap.js') }}"></script>
+			{% else %}
+				<script src="{{ asset('js/jquery.min.js') }}"></script>
+				<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+			{% endif %}
+
+		{% endblock %}
 	</body>
 </html>

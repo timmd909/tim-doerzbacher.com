@@ -26,11 +26,6 @@ class ControllerBase extends Controller
 		return $em;
 	}
 
-	protected function getTemplateFilename($page)
-	{
-		return sprintf('TimDoerzbacherBundle:Default:%s.html.twig', $page);
-	}
-
 	protected function getDefaultPages()
 	{
 		return array('home','blog', 'resume', 'links');
