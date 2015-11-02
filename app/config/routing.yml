@@ -1,4 +1,7 @@
-tim_doerzbacher:
-    resource: "@TimDoerzbacherBundle/Resources/config/routing.yml"
-    prefix:   /
+#app:
+#  resource: "@AppBundle/Controller/"
+#  type:     annotation
 
+tim_doerzbacher_pages:
+  pattern:  /{page}
+  defaults: { _controller: AppBundle:Default:index, page: "home" }

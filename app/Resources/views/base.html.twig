@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+
+		<title>{% block title %}tim-doerzbacher.com &mdash; Proud owner of a robot{% endblock %}</title>
+		<meta name="description" content="Personal website for Tim Doerzbacher">
+  	<meta name="author" content="Tim Doerzbacher">
+
+		<!-- Stylesheet(s) -->
+		{% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+		{% endblock %}
+		<!-- / Stylesheet(s) -->
+
+		<!-- Favicon info -->
+		<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+		<!-- / Favicon info -->
+	</head>
+	<body>
+		<header>
+			<h1>{% block header %}
+				{{ page | capitalize }}
+			{% endblock %}</h1>
+
+			<nav>{% block navbar %}
+				<ul>
+					<li>Hi there</li>
+				</ul>
+			{% endblock %}</nav>
+		</header>
+		{% block body %}{% endblock %}
+		{% block scripts %}{% endblock %}
+	</body>
 </html>
