@@ -18,13 +18,15 @@ class DefaultController extends ControllerBase
 		switch ($page) {
 			case 'blog':
 				return $this->redirect('http://blog.tim-doerzbacher.com/');
+			case 'artwork':
+				return $this->redirect('http://blog.tim-doerzbacher.com/category/arts-and-crafts/');
 			case 'catpoo':
 				return $this->redirect('http://blog.tim-doerzbacher.com/category/robotics/catpoo/');
 		}
 
 		// replace this example code with whatever you need
 		if (FALSE !== preg_match('/[a-z0-9]/', $page)) {
-			$template = sprintf('default/%s.html.twig', $page);
+			$template = $this->getTemplateFilename($page);
 			return $this->render($template, array(
 				'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
 				'ALL_PAGES' => $this->getDefaultPages(),

@@ -1,7 +1,7 @@
 resume:
   metadata:
     - key:   phone_number
-      value: '1 • 412 • 758 •<span class="spam-prevention">no bad phone calls</span>0179'
+      value: '1 • 412 • 758 • <span class="spam-prevention">no bad phone calls</span>0179'
     - key:   email
       value: 'tim@<span class="spam-prevention">no bad emails</span>tim-doerzbacher.com'
     - key:   address

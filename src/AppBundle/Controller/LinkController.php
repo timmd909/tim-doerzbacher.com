@@ -13,8 +13,8 @@ class LinkController extends ControllerBase
 	public function linkAction()
 	{
 		$options = array(
-			'page' => 'links',
-			'pages' => $this->getDefaultPages()
+			'PAGE' => 'links',
+			'ALL_PAGES' => $this->getDefaultPages(),
 		);
 
 		// load all the categories from the database

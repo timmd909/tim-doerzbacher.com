@@ -4,13 +4,13 @@
  *
  */
 
-namespace timmd909\Bundle\DataFixtures\ORM;
+namespace AppBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use timmd909\Bundle\Entity\Link;
-use timmd909\Bundle\Entity\LinkCategory;
-use timmd909\Bundle\DataFixtures\FixtureBase;
+use AppBundle\Entity\Link;
+use AppBundle\Entity\LinkCategory;
+use AppBundle\DataFixtures\FixtureBase;
 
 class LoadLinkData extends FixtureBase
 {

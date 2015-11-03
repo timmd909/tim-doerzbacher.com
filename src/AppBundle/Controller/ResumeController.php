@@ -12,11 +12,12 @@ class ResumeController extends ControllerBase
 	public function resumeAction()
 	{
 		$options = array(
-			'page' => 'resume',
-			'pages' => $this->getDefaultPages()
+			'PAGE' => 'resume',
+			'ALL_PAGES' => $this->getDefaultPages()
 		);
 
 		$options['experiences']       = $this->experienceRepository->findAll();
+
 		$options['skills']            = $this->skillRepository->findAll();
 		$options['tools']             = $this->toolRepository->findAll();
 		$options['languages']         = $this->languageRepository->findAll();

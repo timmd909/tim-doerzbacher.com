@@ -4,18 +4,18 @@
  *
  */
 
-namespace timmd909\Bundle\DataFixtures\ORM;
+namespace AppBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use timmd909\Bundle\DataFixtures\FixtureBase;
-use timmd909\Bundle\Entity\Experience;
-use timmd909\Bundle\Entity\ExperiencePoint;
-use timmd909\Bundle\Entity\Language;
-use timmd909\Bundle\Entity\OperatingSystem;
-use timmd909\Bundle\Entity\Skill;
-use timmd909\Bundle\Entity\Tool;
-use timmd909\Bundle\Entity\KeyValue;
+use AppBundle\DataFixtures\FixtureBase;
+use AppBundle\Entity\Experience;
+use AppBundle\Entity\ExperiencePoint;
+use AppBundle\Entity\Language;
+use AppBundle\Entity\OperatingSystem;
+use AppBundle\Entity\Skill;
+use AppBundle\Entity\Tool;
+use AppBundle\Entity\KeyValue;
 
 class LoadResumeData extends FixtureBase
 {

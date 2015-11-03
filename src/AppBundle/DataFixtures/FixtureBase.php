@@ -4,7 +4,7 @@
  *
  */
 
-namespace timmd909\Bundle\DataFixtures;
+namespace AppBundle\DataFixtures;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 
@@ -16,7 +16,7 @@ abstract class FixtureBase implements FixtureInterface
 	 */
 	protected function loadYamlResource($filename)
 	{
-		$yamlFilename = dirname(__FILE__).'/../Resources/'.$filename;
+		$yamlFilename = dirname(__FILE__).'/../../../app/Resources/'.$filename;
 		$yaml = \yaml_parse_file($yamlFilename);
 
 		if ($yaml === FALSE) {

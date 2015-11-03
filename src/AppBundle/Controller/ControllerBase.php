@@ -31,6 +31,10 @@ class ControllerBase extends Controller
 		return array('home', 'blog', 'resume', 'links');
 	}
 
+	protected function getTemplateFilename($page) {
+		return sprintf('default/%s.html.twig', $page);
+	}
+
 	public function __get($variable)
 	{
 		switch ($variable) {
