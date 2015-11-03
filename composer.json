@@ -20,7 +20,8 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "doctrine/doctrine-fixtures-bundle": "^2.2",
         "twbs/bootstrap": "^3.3",
-        "frameworks/jquery": "^2.1"
+        "frameworks/jquery": "^2.1",
+        "components/font-awesome": "^4.4"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

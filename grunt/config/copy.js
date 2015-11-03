@@ -21,6 +21,23 @@ module.exports = {
 				dest: 'web/js/'
 			}
 		]
-	} // jquery
+	}, // jquery
+
+	'font-awesome': {
+		files: [
+			{
+				expand: true,
+				flatten: true,
+				src: 'vendor/components/font-awesome/css/**.css',
+				dest: 'web/css'
+			},
+			{
+				expand: true,
+				flatten: true,
+				src: 'vendor/components/font-awesome/fonts/**',
+				dest: 'web/fonts'
+			}
+		]
+	}
 
 };
