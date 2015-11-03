@@ -37,7 +37,9 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="{{ path('pages') }}">tim-doerzbacher.com</a>
+						<a class="navbar-brand" href="{{ path('pages') }}">
+							<img alt="tim-doerzbacher.com" src="{{ asset('img/icons/my-logo.svg') }}">
+						</a>
 					</div>
 
 					<div class="collapse navbar-collapse" id="main-navigation">
@@ -52,7 +54,14 @@
 		</header>
 		{% endblock %}
 
-		{% block body %}{% endblock %}
+		<main>{% block body %}{% endblock %}</main>
+
+		{% block footer %}
+		<footer class="footer-main">
+			<p>&copy; 2015 Tim Doerzbacher &mdash; All Rights Reserved</p>
+		</footer>
+		{% endblock %}
+
 		{% block scripts %}
 			{% if app.environment == 'dev' %}
 				<script src="{{ asset('js/jquery.js') }}"></script>

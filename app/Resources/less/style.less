@@ -7,6 +7,11 @@
 body {
 	// leave enough padding for the navbar at top
 	padding-top: 50px;
+	background: @gray-lighter;
+}
+
+main {
+	background: white;
 }
 
 .navbar-main {
@@ -17,3 +22,28 @@ body {
 	box-shadow: 0 0 10px @gray-light;
 }
 
+.navbar-brand {
+	img {
+		height: 26pt;
+		margin-top: -5pt;
+	}
+}
+
+
+a[rel="external"] {
+
+	&:after {
+		content: ' \f08e';
+		font-family: FontAwesome;
+		font-size: 90%;
+	}
+
+}
+
+.footer-main {
+	.text-center;
+	.text-muted;
+
+	font-size: @font-size-small;
+	padding: 3em 0 2em 0;
+}
