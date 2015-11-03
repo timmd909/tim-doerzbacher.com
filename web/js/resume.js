@@ -1,0 +1,3 @@
+$(function() {	
+	$('.spam-prevention').remove();
+});

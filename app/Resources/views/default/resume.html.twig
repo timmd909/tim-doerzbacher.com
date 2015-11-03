@@ -2,8 +2,7 @@
 
 {% block scripts %}
 {{ parent() }}
-<script type="text/javascript" src="{{ asset('bundles/timdoerzbacher/js/masonry.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('bundles/timdoerzbacher/js/resume.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/resume.js') }}"></script>
 {% endblock %}
 
 {# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
@@ -15,14 +14,8 @@
 
 {# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
 
-{% block headline %}
-	{{ key_values.headline }}
-{% endblock %}
-
-{# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
-
-{% macro skill(info) %}
-	<li>{% spaceless %}
+{% macro skill(info, classes) %}
+	<li class="{{ classes | default('col-xs-6 col-sm-4 col-md-3 col-lg-2')}}">{% spaceless %}
 		<div class="level {{ 'level' ~ info.level }}">
 			<img src="{{ asset('bundles/timdoerzbacher/img/battery-icons.png') }}"
 				alt="{{ info.level }} out of 5" /></div>
@@ -33,23 +26,25 @@
 {# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
 
 {% macro experience(info) %}
-	<div class="experience">
-		<div class="duration">{{ info.started }} &mdash;
+	<div class="experience row">
+		<div class="duration col-xs-12 col-md-3">{{ info.started }} &mdash;
 			{% if info.ended is null %}Present {% else %} {{ info.ended }}{% endif %}
 		</div>
-		<h3>{{ info.name }}</h3>
-		<div class="description">{{ info.description }}</div>
-		<ul>{% for currPoint in info.experiencePoints %}
-			{% spaceless %}
+		<div class="col-xs-12 col-md-9">
+			<h3>{{ info.name }}</h3>
+			<div class="description">{{ info.description }}</div>
+			<ul>{% for currPoint in info.experiencePoints %}
+				{% spaceless %}
 
-			<li>{{ currPoint.description }}
-				<ul>{% for currNote in currPoint.children %}
-					<li>{{ currNote.description }}</li>
-				{% endfor %}</ul>
-			</li>
+				<li>{{ currPoint.description }}
+					<ul>{% for currNote in currPoint.children %}
+						<li>{{ currNote.description }}</li>
+					{% endfor %}</ul>
+				</li>
 
-			{% endspaceless %}
-		{% endfor %}</ul>
+				{% endspaceless %}
+			{% endfor %}</ul>
+		</div>
 	</div>
 {% endmacro %}
 
@@ -57,31 +52,36 @@
 
 {# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
 
-{% block content %}
+{% block body %}
 
-	<div class="section intro">
+<div class="container">
+
+	<section class="intro">
 		<p>{{ key_values.introcopy }}</p>
-	</div>
+	</section>
 
-	<div class="section contact-info">{% spaceless %}
+	<section class="contact-info">{% spaceless %}
 		<h2>Contact Info</h2>
-		<div class="container">
-			<div class="phone-number">
+		<div class="row">
+			<div class="phone-number col-xs-12 col-md-3">
 				<p>{{ key_values.phone_number | raw }}</p>
 			</div>
-			<div class="address">
+			<div class="address col-xs-12 col-md-3">
 				<p>{{ key_values.address }}</p>
-				<p>{{ key_values.city }}, {{ key_values.state}} {{ key_values.zip}}</p>
+				<p>{{ key_values.city }}, {{ key_values.state }} {{ key_values.zip }}</p>
 			</div>
-			<div class="email-address">
-				<p>{{ key_values.email | raw }}</span>
-				<span class="domain"></span></p>
+			<div class="email-address col-xs-12 col-md-3">
+				<p>
+					{{ key_values.email | raw }}
+					<span class="domain"></span>
+				</p>
 			</div>
 		</div>
-		<div class="clear-both"></div>
+	</section>
+
 	{% endspaceless %}</div>
 
-	<div class="section skillsets">
+	<section class="skillsets container">
 		<h2>What I Can Do</h2>
 
 		<p>Here's an annotated list of software, languages, and so forth
@@ -93,28 +93,28 @@
 		</p>
 
 		<div class="container">
-			<div class="sub-section">
+			<div class="sub-section row">
 				<h3>Software &amp; Tools</h3>
 				<ul class="tools">{% for tool in tools %}
 					{{ resume.skill(tool) }}
 				{% endfor %}</ul>
 			</div>
 
-			<div class="sub-section">
+			<div class="sub-section row">
 				<h3>Languages</h3>
 				<ul class="languages">{% for language in languages %}
 					{{ resume.skill(language) }}
 				{% endfor %}</ul>
 			</div>
 
-			<div class="sub-section">
+			<div class="sub-section row">
 				<h3>Skills</h3>
 				<ul class="skills">{% for skill in skills %}
 					{{ resume.skill(skill) }}
 				{% endfor %}</ul>
 			</div>
 
-			<div class="sub-section">
+			<div class="sub-section row">
 				<h3>Operating Systems</h3>
 				<ul class="operating-systems">{% for os in operating_systems %}
 					{{ resume.skill(os) }}
@@ -123,28 +123,33 @@
 
 		</div>
 
-	</div>
+	</section>
 
-	<div class="section experiences">
+	<section class="experiences container">
 		<h2>Where I've Worked</h2>
 
 		{% for curr in experiences %}
-			{{  resume.experience(curr) }}
+			{{ resume.experience(curr) }}
 		{% endfor %}
-	</div>
+	</section>
 
-	<div class="section education">
+	<section class="education container">
 		<h2>Education</h2>
-		<div class="experience">
-			<div class="duration">2005 &mdash; 2009 </div>
-			<h3>Art Institute of Pittsburgh</h3>
-			<div class="description">Graduated with Bachelor degree in Graphic Design</div>
+		<div class="experience row">
+			<div class="duration  col-xs-12 col-md-3">2005 &mdash; 2009 </div>
+			<div class="col-xs-12 col-md-9">
+				<h3>Art Institute of Pittsburgh</h3>
+				<div class="description">Graduated with Bachelor degree in Graphic Design</div>
+			</div>
 		</div>
-	</div>
+	</section>
 
-	<div class="section references">
+	<section class="references container">
 		<h2>References</h2>
 		References available upon request.
-	</div>
+	</section>
+
+</div>
+
 
 {% endblock %}

@@ -40,7 +40,7 @@ class LinkController extends ControllerBase
 			$options['links'][] = $tempCategory;
 		}
 
-		$template = $this->getTemplateFilename('resume');
+		$template = $this->getTemplateFilename('links');
 		return $this->render($template, $options);
 	}
 
