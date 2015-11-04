@@ -1,11 +1,11 @@
 resume:
   metadata:
     - key:   phone_number
-      value: '1 • 412 • 758 • <span class="spam-prevention">no bad phone calls</span>0179'
+      value: '1OBFUSCATED • 412 OBFUSCATED• OBFUSCATED758 • 01OBFUSCATED79OBFUSCATED'
     - key:   email
-      value: 'tim@<span class="spam-prevention">no bad emails</span>tim-doerzbacher.com'
+      value: 'tim@OBFUSCATEDtim-doerzbOBFUSCATEDacher.com'
     - key:   address
-      value: "136 North South Drive"
+      value: "13OBFUSCATED6 NortOBFUSCATEDh South DrivOBFUSCATEDe"
     - key:   city
       value: Pittsburgh
     - key:   state
@@ -39,7 +39,6 @@ resume:
       - { name: "PHP"         , level: 5 }
       - { name: "Python"      , level: 2 }
       - { name: "Yaml"        , level: 5 }
-      - { name: "Klingon"     , level: 0 }
 
   tools:
     title: "Software & Tools"
@@ -70,13 +69,13 @@ resume:
   skills:
     title: "Skills"
     entries:
-      - { name: "AJAX"                       , level: 5 }
-      - { name: "Database Design"            , level: 4 }
-      - { name: "Graphic Design"             , level: 3 }
-      - { name: "LAMP Servers"               , level: 5 }
-      - { name: "Linux Server Administration", level: 4 }
-      - { name: "Portraiture"                , level: 2 }
-      - { name: "Website Design"             , level: 4 }
+      - { name: "AJAX"                  , level: 5 }
+      - { name: "Database Design"       , level: 4 }
+      - { name: "Graphic Design"        , level: 3 }
+      - { name: "LAMP Servers"          , level: 5 }
+      - { name: "Linux Administration"  , level: 4 }
+      - { name: "Portraiture"           , level: 2 }
+      - { name: "Website Design"        , level: 4 }
 
   operating_systems:
     title: "Operating Systems"
@@ -89,10 +88,10 @@ resume:
     title: "Work Experience"
     entries:
       - name: "Intermedix"
-        description: "Front End Software Engineer"
+        description: "Front End Engineer / Release Engineer"
         responsibilities:
           - description:
-              Took over release engineering and devops responsibilities to streamline
+              Oversaw release engineering and devops responsibilities to streamline
               releases and development
             notes:
               - Updated and re-designed the Grunt project file into a modular
@@ -136,7 +135,7 @@ resume:
           end: "2015"
 
       - name: "Walking Thumbs"
-        description: "Server Developer"
+        description: "Full Stack Developer"
         responsibilities:
           - description:
               Integrating PHP and ejabberd based nodes and their respective
