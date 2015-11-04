@@ -1,0 +1,47 @@
+link_categories:
+
+    - name: "Personal & Social Networking"
+      links:
+        - name: Cat Antagonizing Tactical Platform of Oppression
+          href: http://tim-doerzbacher.com/catpoo
+          description: I decided to learn how to build a robot.
+          background: catpoo.jpg
+          external: false
+
+        - name: My GitHub Page
+          href: http://github.com/timmd909
+          description: My personal GitHub homepage
+          background: github.jpg
+
+        - name: My somewhat neglected LinkedIn profile.
+          href: http://www.linkedin.com/pub/tim-doerzbacher/86/438/664/
+          description: Seems like a dating website reskinned for business.
+          background: linkedin.png
+
+        - name: My personal MapMyRun profile
+          href: http://www.mapmyrun.com/profile/4108224/
+          description: Encourage me or tell me I'm slacking. Both are welcome.
+          background: mapmyrun.png
+
+        - name: RGDJR
+          href: http://www.rgdjr.com/
+          description: My brother's website
+          background: rgdjr.png
+
+    - name: YouTube channels
+      links:
+        - name: How It Should Have Ended
+          href: http://www.howitshouldhaveended.com
+          description: Sick of movies ending horribly when you know it should've been another way?
+          background: hishe.png
+
+        - name: The Science Foundation
+          href: https://www.youtube.com/user/TheScienceFoundation
+          description: SCIENCE!
+          background: science-foundation.png
+
+        - name: The Onion
+          href: https://www.youtube.com/user/TheOnion
+          description: Laughter. The best medicine.
+          background: the-onion.jpg
+

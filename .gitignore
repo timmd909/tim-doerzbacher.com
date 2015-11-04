@@ -1,4 +1,6 @@
 /web/bundles/
+/web/css/
+
 /app/bootstrap.php.cache
 /app/cache/*
 /app/config/parameters.yml
@@ -10,8 +12,5 @@
 #/bin/
 /composer.phar
 
-/web/PGT/
-/web/SPT/
-/web/ZIP/
-/web/submissions/
 
+/node_modules

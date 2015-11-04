@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
+
+{% block stylesheets %}
+{{ parent() }}
+<link type="text/css" rel="stylesheet" media="screen" href="{{ asset('css/links.css') }}" />
+{% endblock %}
+
+{# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
+
+{% block body %}
+<div class="container">
+
+	{% for category in links %}
+		<section class="link-section">
+			<h2 class="link-section_title">{{ category.name }}</h2>
+
+			<ul class="list-unstyled row">{% for curr_link in category['links'] %}
+
+				<li class="col-xs-12 col-sm-6 col-lg-4">
+					<div class="link-section_link">
+						<header class="link-section_header">
+							<a href="{{ curr_link.href }}"
+								{% if curr_link.external %}target="_blank"{% endif %}>
+								<img src="{{ asset('img/links/') ~ curr_link.background	}}"
+										 alt="{{ curr_link.name }}" class="link-section_image">
+								<h4 class="link-section_name">{{ curr_link.name }}</h4>
+							</a>
+						</header>
+
+						<div class="link-section_link-description">
+							<p>{{ curr_link.description }}</p>
+
+							<p class="link-section_learn-more">
+								<a class="btn btn-primary" href="{{ curr_link.href }}"
+									 {% if curr_link.external %}rel="external"{% endif %}>
+									Check it out
+								</a>
+							</p>
+						</div>
+
+					</div>
+				</li>
+
+			{% endfor %}</ul>
+		</section>
+	{% endfor %}
+
+	<div class="fair-use alert alert-info">
+		<p>
+			<strong>Fair Use Notice:</strong>
+			The above are all croppings of screenshots from the websites linked.
+			All rights belong to their respective owners.
+		</p>
+	</div>
+
+</div>
+{% endblock %}

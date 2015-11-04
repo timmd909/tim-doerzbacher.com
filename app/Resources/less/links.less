@@ -1,0 +1,70 @@
+@import (reference) "../../../vendor/twbs/bootstrap/less/variables.less";
+@import (reference) "../../../vendor/twbs/bootstrap/less/mixins.less";
+@import (reference) "../../../vendor/twbs/bootstrap/less/type.less";
+
+.link-section {
+
+	.link-section_title {
+	}
+
+	.link-section_link {
+		max-width: 320px;
+		margin: 0 auto;
+		display: block;
+
+		.link-section_header {
+			height: 160px;
+			position: relative;
+			padding: 0;
+
+			a {
+				color: #ddd;
+				text-shadow: 0 0 2px #000;
+			}
+			.link-section_name {
+				background: rgba(0, 0, 0, 0.5);
+				transition: 400ms;
+
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				display: block;
+
+				padding: 4pt;
+				margin: 0;
+			}
+
+			.link-section_image {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 320px;
+				height: 160px;
+				display: block;
+			}
+		}
+
+		&:hover {
+			a {
+				color: #fff;
+			}
+			.link-section_name {
+				background: rgba(0, 0, 0, 1);
+				transition: 400ms;
+			}
+		}
+
+		.link-section_link-description {
+			color: @gray-light;
+			padding-top: 8.5pt;
+			min-height: 10em;
+		}
+
+		.link-section_learn-more {
+			.text-center();
+		}
+
+	} // .link-section_link
+
+}
