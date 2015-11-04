@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
+{# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
+
 {% block scripts %}
 {{ parent() }}
 <script type="text/javascript" src="{{ asset('js/resume.js') }}"></script>
@@ -9,40 +11,58 @@
 
 {% block stylesheets %}
 {{ parent() }}
-<link type="text/css" rel="stylesheet" href="{{ asset('bundles/timdoerzbacher/css/resume.css') }}" />
+<link type="text/css" rel="stylesheet" href="{{ asset('css/resume.css') }}" />
 {% endblock %}
 
 {# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
 
 {% macro skill(info, classes) %}
-	<li class="{{ classes | default('col-xs-6 col-sm-4 col-md-3 col-lg-2')}}">{% spaceless %}
-		<div class="level {{ 'level' ~ info.level }}">
-			<img src="{{ asset('bundles/timdoerzbacher/img/battery-icons.png') }}"
-				alt="{{ info.level }} out of 5" /></div>
+
+	{% if info.level == 1 %}
+		{% set icon_title = 'Used it before' %}
+		{% set icon_class = 'fa-battery-0 text-muted' %}
+	{% elseif info.level == 2 %}
+		{% set icon_title = 'I know enough to be dangerous' %}
+		{% set icon_class = 'fa-battery-1 text-danger' %}
+	{% elseif info.level == 3 %}
+		{% set icon_title = 'I know enough not to be dangerous' %}
+		{% set icon_class = 'fa-battery-2 text-warning' %}
+	{% elseif info.level == 4 %}
+		{% set icon_title = 'Comfortable with it' %}
+		{% set icon_class = 'fa-battery-3 text-success' %}
+	{% elseif info.level == 5 %}
+		{% set icon_title = 'Feeling pretty confident' %}
+		{% set icon_class = 'fa-battery-4 text-info' %}
+	{% else %}
+		{% set icon_title = 'bad value' %}
+		{% set icon_class = 'fa-warning' %}
+	{% endif %}
+
+	<li class="resume_section_list-item col-xs-6 col-sm-4 col-md-3"
+			 title="{{ icon_title }}">{% spaceless %}
+		<i class="resume_section_list-icon fa {{ icon_class }}"></i>
 		{{ info.name }}
+
 	{% endspaceless %}</li>
 {% endmacro %}
 
 {# -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- #}
 
 {% macro experience(info) %}
-	<div class="experience row">
-		<div class="duration col-xs-12 col-md-3">{{ info.started }} &mdash;
+	<div class="row">
+		<div class="resume_section_dates col-xs-12 col-sm-2">{{ info.started }} &mdash;
 			{% if info.ended is null %}Present {% else %} {{ info.ended }}{% endif %}
 		</div>
-		<div class="col-xs-12 col-md-9">
-			<h3>{{ info.name }}</h3>
-			<div class="description">{{ info.description }}</div>
-			<ul>{% for currPoint in info.experiencePoints %}
-				{% spaceless %}
+		<div class="col-xs-12 col-sm-10">
+			<h3 class="resume_section_header">{{ info.name }}</h3>
+			<h4 class="resume_section_subhead">{{ info.description }}</h4>
+			<ul class="resume_section_list">{% for currPoint in info.experiencePoints %}
 
-				<li>{{ currPoint.description }}
-					<ul>{% for currNote in currPoint.children %}
-						<li>{{ currNote.description }}</li>
+				<li class="resume_section_list-item">{{ currPoint.description }}
+					<ul class="resume_section_list">{% for currNote in currPoint.children %}
+						<li class="resume_section_list-item">{{ currNote.description }}</li>
 					{% endfor %}</ul>
 				</li>
-
-				{% endspaceless %}
 			{% endfor %}</ul>
 		</div>
 	</div>
@@ -56,100 +76,117 @@
 
 <div class="container">
 
-	<section class="intro">
-		<p>{{ key_values.introcopy }}</p>
-	</section>
+	<article class="resume">
 
-	<section class="contact-info">{% spaceless %}
-		<h2>Contact Info</h2>
-		<div class="row">
-			<div class="phone-number col-xs-12 col-md-3">
-				<p>{{ key_values.phone_number | raw }}</p>
+		<section class="resume_section resume_section_intro">
+			<p>{{ key_values.introcopy }}</p>
+		</section>
+
+		<section class="resume_section resume_section_contact">
+			<h2 class="resume_section_title">Contact Info</h2>
+			<div class="row">
+				<div class="phone-number col-xs-12 col-md-4">
+					<a class="spam-prevention" href="tel:+1-412-758-0179">{{ key_values.phone_number | raw }}</a>
+				</div>
+				<div class="address col-xs-12 col-md-4">
+					<address class="spam-prevention">
+						{{ key_values.address }}<br />
+						{{ key_values.city }}, {{ key_values.state }} {{ key_values.zip }}
+					</address>
+				</div>
+				<div class="email-address col-xs-12 col-md-4">
+					<a href="email:{{ key_values.email | raw }}" class="spam-prevention">
+						{{ key_values.email | raw }}
+					</a>
+				</div>
 			</div>
-			<div class="address col-xs-12 col-md-3">
-				<p>{{ key_values.address }}</p>
-				<p>{{ key_values.city }}, {{ key_values.state }} {{ key_values.zip }}</p>
-			</div>
-			<div class="email-address col-xs-12 col-md-3">
-				<p>
-					{{ key_values.email | raw }}
-					<span class="domain"></span>
-				</p>
-			</div>
-		</div>
-	</section>
+		</section>
 
-	{% endspaceless %}</div>
+		<section class="resume_section">
+			<h2 class="resume_section_title">What I Can Do</h2>
 
-	<section class="skillsets container">
-		<h2>What I Can Do</h2>
+			<p>
+				Here's an annotated list of software, languages, and so forth
+				that I've used. The battery icons indicate my level of comfort
+				with a particular item. They correlate very closely with how
+				long I've been using them. Except ejabberd. I'll never be
+				comfortable using that on a day to day basis due to the high
+				risk of self-defenestration after prolonged exposure.
+			</p>
 
-		<p>Here's an annotated list of software, languages, and so forth
-			that I've used. The battery icons indicate my level of comfort
-			with a particular item. They correlate very closely with how
-			long I've been using them. Except ejabberd. I'll never be
-			comfortable using that on a day to day basis due to the high
-			risk of self-defenestration after prolonged exposure.
-		</p>
+			<div>
+				<div class="resume_section_list-container">
+					<h3>Software &amp; Tools</h3>
+					<div class="container">
+						<ul class="resume_section_list row">{% for tool in tools %}
+							{{ resume.skill(tool) }}
+						{% endfor %}</ul>
+					</div>
+				</div>
 
-		<div class="container">
-			<div class="sub-section row">
-				<h3>Software &amp; Tools</h3>
-				<ul class="tools">{% for tool in tools %}
-					{{ resume.skill(tool) }}
-				{% endfor %}</ul>
-			</div>
+				<div class="resume_section_list-container">
+					<h3>Languages</h3>
+					<div class="container">
+						<ul class="resume_section_list row">{% for language in languages %}
+							{{ resume.skill(language) }}
+						{% endfor %}</ul>
+					</div>
+				</div>
 
-			<div class="sub-section row">
-				<h3>Languages</h3>
-				<ul class="languages">{% for language in languages %}
-					{{ resume.skill(language) }}
-				{% endfor %}</ul>
-			</div>
+				<div class="resume_section_list-container">
+					<h3>Skills</h3>
+					<div class="container">
+						<ul class="resume_section_list row">{% for skill in skills %}
+							{{ resume.skill(skill) }}
+						{% endfor %}</ul>
+					</div>
+				</div>
 
-			<div class="sub-section row">
-				<h3>Skills</h3>
-				<ul class="skills">{% for skill in skills %}
-					{{ resume.skill(skill) }}
-				{% endfor %}</ul>
-			</div>
+				<div class="resume_section_list-container">
+					<h3>Operating Systems</h3>
+					<div class="container">
+						<ul class="resume_section_list row">{% for os in operating_systems %}
+							{{ resume.skill(os) }}
+						{% endfor %}</ul>
+					</div>
+				</div>
 
-			<div class="sub-section row">
-				<h3>Operating Systems</h3>
-				<ul class="operating-systems">{% for os in operating_systems %}
-					{{ resume.skill(os) }}
-				{% endfor %}</ul>
 			</div>
 
-		</div>
+		</section>
 
-	</section>
+		<section class="resume_section resume_section_xp">
+			<h2 class="resume_section_title">Where I've Worked</h2>
 
-	<section class="experiences container">
-		<h2>Where I've Worked</h2>
-
-		{% for curr in experiences %}
-			{{ resume.experience(curr) }}
-		{% endfor %}
-	</section>
-
-	<section class="education container">
-		<h2>Education</h2>
-		<div class="experience row">
-			<div class="duration  col-xs-12 col-md-3">2005 &mdash; 2009 </div>
-			<div class="col-xs-12 col-md-9">
-				<h3>Art Institute of Pittsburgh</h3>
-				<div class="description">Graduated with Bachelor degree in Graphic Design</div>
+			<div class="container">
+				{% for curr in experiences %}
+					{{ resume.experience(curr) }}
+				{% endfor %}
 			</div>
-		</div>
-	</section>
 
-	<section class="references container">
-		<h2>References</h2>
-		References available upon request.
-	</section>
+			<br>
+		</section>
 
+		<section class="resume_section">
+			<h2 class="resume_section_title">Education</h2>
+
+			<div class="container">
+				<div class="row">
+					<div class="resume_section_dates col-xs-12 col-sm-2">2005 &mdash; 2009 </div>
+					<div class="col-xs-12 col-sm-10">
+						<h3 class="resume_section_header">Art Institute of Pittsburgh</h3>
+						<h4 class="resume_section_subhead">Graduated with Bachelor degree in Graphic Design</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="resume_section resume_section--last">
+			<h2 class="resume_section_title">References</h2>
+			References available upon request.
+		</section>
+
+	</article>
 </div>
-
 
 {% endblock %}

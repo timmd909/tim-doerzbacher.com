@@ -5,6 +5,7 @@ var FILES = {
 	'web/css/font-awesome.css': 'app/Resources/less/font-awesome.less',
 	'web/css/home.css': 'app/Resources/less/home.less',
 	'web/css/links.css': 'app/Resources/less/links.less',
+	'web/css/resume.css': 'app/Resources/less/resume.less',
 	'web/css/style.css': 'app/Resources/less/style.less'
 };
 
