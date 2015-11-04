@@ -6,11 +6,7 @@ link_categories:
           href: http://tim-doerzbacher.com/catpoo
           description: I decided to learn how to build a robot.
           background: catpoo.jpg
-
-        - name: My Facebook Page
-          href: http://facebook.com/timothy.doerzbache
-          description: I click the "Share" button a lot on random websites.
-          background: facebook.jpg
+          external: false
 
         - name: My GitHub Page
           href: http://github.com/timmd909
@@ -48,3 +44,4 @@ link_categories:
           href: https://www.youtube.com/user/TheOnion
           description: Laughter. The best medicine.
           background: the-onion.jpg
+

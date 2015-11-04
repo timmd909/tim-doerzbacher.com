@@ -38,8 +38,14 @@ class LoadLinkData extends FixtureBase
 				$linkEntity->setName($link['name']);
 				$linkEntity->setTarget($link['href']);
 				$linkEntity->setDescription($link['description']);
+
+				if (isset($link['external'])) {
+					$linkEntity->setExternal($link['external']);
+				}
+
 				$linkEntity->setCategory($linkCategoryEntity);
 				$linkEntity->setWeight($linkWeight++);
+
 				if (isset($link['background']))
 					$linkEntity->setImage($link['background']);
 				$manager->persist($linkEntity);

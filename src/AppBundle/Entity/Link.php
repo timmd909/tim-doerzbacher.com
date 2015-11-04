@@ -42,6 +42,11 @@ class Link
 	protected $weight = -1;
 
 	/**
+	 * @ORM\Column(type="boolean")
+	 */
+	protected $external = true;
+
+	/**
 	 * @ORM\ManyToOne(targetEntity="LinkCategory", inversedBy="links")
 	 * @ORM\JoinColumn(name="link_category_id", referencedColumnName="id")
 	 */
@@ -160,6 +165,31 @@ class Link
 	public function getWeight()
 	{
 		return $this->weight;
+	}
+
+	/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */
+
+	/**
+	 * Set whether a link is external
+	 *
+	 * @param string $linkWeight
+	 * @return Link
+	 */
+	public function setExternal($external)
+	{
+		$this->external = $external;
+
+		return $this;
+	}
+
+	/**
+	 * Get if a link is external
+	 *
+	 * @return string
+	 */
+	public function getExternal()
+	{
+		return $this->external;
 	}
 
 	/* -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- -=- */

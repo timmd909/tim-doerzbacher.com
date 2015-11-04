@@ -32,7 +32,8 @@ class LinkController extends ControllerBase
 					'name'        => $link->getName(),
 					'href'        => $link->getTarget(),
 					'description' => $link->getDescription(),
-					'background'  => $link->getImage()
+					'background'  => $link->getImage(),
+					'external'    => $link->getExternal()
 				);
 				$tempCategory['links'][] = $tempLink;
 			}
