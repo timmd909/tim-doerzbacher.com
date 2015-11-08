@@ -38,7 +38,7 @@
 		{% set icon_class = 'fa-warning' %}
 	{% endif %}
 
-	<li class="resume_section_list-item col-xs-6 col-sm-4 col-md-3"
+	<li class="col-xs-6 col-sm-4 col-md-3"
 			 title="{{ icon_title }}">{% spaceless %}
 		<i class="resume_section_list-icon fa {{ icon_class }}"></i>
 		{{ info.name }}
@@ -118,7 +118,7 @@
 				<div class="resume_section_list-container">
 					<h3>Software &amp; Tools</h3>
 					<div class="container">
-						<ul class="resume_section_list row">{% for tool in tools %}
+						<ul class="list-unstyled row">{% for tool in tools %}
 							{{ resume.skill(tool) }}
 						{% endfor %}</ul>
 					</div>
@@ -127,7 +127,7 @@
 				<div class="resume_section_list-container">
 					<h3>Languages</h3>
 					<div class="container">
-						<ul class="resume_section_list row">{% for language in languages %}
+						<ul class="list-unstyled row">{% for language in languages %}
 							{{ resume.skill(language) }}
 						{% endfor %}</ul>
 					</div>
@@ -136,7 +136,7 @@
 				<div class="resume_section_list-container">
 					<h3>Skills</h3>
 					<div class="container">
-						<ul class="resume_section_list row">{% for skill in skills %}
+						<ul class="list-unstyled row">{% for skill in skills %}
 							{{ resume.skill(skill) }}
 						{% endfor %}</ul>
 					</div>
@@ -145,7 +145,7 @@
 				<div class="resume_section_list-container">
 					<h3>Operating Systems</h3>
 					<div class="container">
-						<ul class="resume_section_list row">{% for os in operating_systems %}
+						<ul class="list-unstyled row">{% for os in operating_systems %}
 							{{ resume.skill(os) }}
 						{% endfor %}</ul>
 					</div>
