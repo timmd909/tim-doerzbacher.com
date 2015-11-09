@@ -74,7 +74,6 @@ resume:
       - { name: "Graphic Design"        , level: 3 }
       - { name: "LAMP Servers"          , level: 5 }
       - { name: "Linux Administration"  , level: 4 }
-      - { name: "Portraiture"           , level: 2 }
       - { name: "Website Design"        , level: 4 }
 
   operating_systems:
