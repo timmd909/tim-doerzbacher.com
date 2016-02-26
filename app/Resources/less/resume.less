@@ -3,6 +3,7 @@
 @import (reference) "../../../vendor/twbs/bootstrap/less/mixins.less";
 @import (reference) "../../../vendor/twbs/bootstrap/less/type.less";
 @import (reference) "../../../vendor/twbs/bootstrap/less/alerts.less";
+@import (reference) "../../../vendor/twbs/bootstrap/less/utilities.less";
 
 
 .resume_section {
@@ -41,7 +42,28 @@
 	//
 	&.resume_section_intro {
 		padding: 18pt 0 0 0;
+		.resume_pdf-link {
+			.pull-right();
+
+			margin-left: 12pt;
+			text-align: center;
+			width: 64pt;
+
+			a {
+				display: block;
+				padding: 12pt 4pt 4pt 4pt;
+				border-radius: 1000px;
+
+				&:hover, &:active {
+					background-color: lighten(@brand-primary, 50%);
+				}
+			}
+			p {
+				font-size: 8.5pt;
+			}
+		}
 	}
+
 
 	&.resume_section_xp {
 		margin-bottom: -36pt;

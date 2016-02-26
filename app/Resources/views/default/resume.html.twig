@@ -79,6 +79,12 @@
 	<article class="resume">
 
 		<section class="resume_section resume_section_intro">
+			<div class="resume_pdf-link hidden-print">
+				<a href="{{ asset('resume.pdf') }}" title="Download this page in PDF format">
+					<i class="fa fa-file-pdf-o fa-2x"></i>
+					<p>Download PDF</p>
+				</a>
+			</div>
 			<p>{{ key_values.introcopy }}</p>
 		</section>
 
@@ -131,7 +137,7 @@
 				</div>
 
 				<div class="resume_section_list-container">
-					<h3>Skills</h3>
+					<h3>Skills & Techniques</h3>
 					<div class="container">
 						<ul class="list-unstyled row">{% for skill in skills %}
 							{{ resume.skill(skill) }}
