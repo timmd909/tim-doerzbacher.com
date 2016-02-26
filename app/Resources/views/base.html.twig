@@ -27,7 +27,7 @@
 		<link rel="icon" type="image/png" href="{{ asset('android-chrome-192x192.png') }}" sizes="192x192">
 		<link rel="icon" type="image/png" href="{{ asset('favicon-16x16.png') }}" sizes="16x16">
 		<link rel="manifest" href="{{ asset('manifest.json') }}">
-		<link rel="mask-icon" href="{{ asset('safari-pinned-tab.svg') }}" color="#006699">
+		<link rel="mask-icon" href="{{ asset('safari-pinned-tab.svg') }}" color="#da532c">
 		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 		<meta name="apple-mobile-web-app-title" content="tim-doerzbacher.com">
 		<meta name="application-name" content="tim-doerzbacher.com">
@@ -43,7 +43,7 @@
 			<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
 			<link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
 			<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-			<link rel="stylesheet" href="{{ asset('css/print.css') }}" media="print">
+			<link rel="stylesheet" href="{{ asset('css/print.css') }}">
 		{% endblock %}
 		<!-- / Stylesheet(s) -->
 
@@ -54,7 +54,7 @@
 	<body>
 		{% block header %}
 		<header class="header-main">
-			<nav class="navbar navbar-main navbar-fixed-top">
+			<nav class="navbar navbar-main navbar-fixed-top hidden-print">
 				<div class="container-fluid">
 
 					<div class="navbar-header">
@@ -65,7 +65,7 @@
 							<span class="icon-bar"></span>
 						</button>
 						<a class="navbar-brand" href="{{ path('pages') }}">
-							<img alt="tim-doerzbacher.com" src="{{ asset('img/icons/my-logo.svg') }}">
+							<img class="navbar-brand_image" alt="tim-doerzbacher.com" src="{{ asset('img/icons/my-logo.svg') }}">
 						</a>
 					</div>
 
@@ -78,13 +78,18 @@
 					</div>
 				</div>
 			</nav>
+
+			<!-- show a very simple header in print mode -->
+			<h1 class="text-center visible-print-block">
+				Tim-Doerzbacher.com
+			</h1>
 		</header>
 		{% endblock %}
 
 		<main>{% block body %}{% endblock %}</main>
 
 		{% block footer %}
-		<footer class="footer-main">
+		<footer class="footer-main hidden-print">
 			<p>&copy; 2015 Tim Doerzbacher &mdash; All Rights Reserved</p>
 		</footer>
 		{% endblock %}

@@ -4,13 +4,11 @@
 @import (reference) "../../../vendor/twbs/bootstrap/less/type.less";
 @import (reference) "../../../vendor/twbs/bootstrap/less/alerts.less";
 
+
 .resume_section {
 
-	.resume_section_list-container {
-	}
-
 	.resume_section_title {
-		font-size: 200%;
+		font-size: 150%;
 		padding: 10pt 0;
 		margin: 18pt 0;
 	}
@@ -37,82 +35,98 @@
 		border: none;
 		padding-bottom: 36pt;
 	}
-} // .skills_section
 
-//
-// Section custom styles
-//
-.resume_section_intro {
-	padding: 18pt 0 0 0;
-}
-
-.resume_section_xp {
-	margin-bottom: -36pt;
-
-	.row {
-		margin-bottom: 18pt;
+	//
+	// Section custom styles
+	//
+	&.resume_section_intro {
+		padding: 18pt 0 0 0;
 	}
-}
 
-.resume_section_contact {
-	div {
-		.text-center();
-		font-family: @font-family-monospace;
+	&.resume_section_xp {
+		margin-bottom: -36pt;
+
+		.row {
+			margin-bottom: 18pt;
+		}
 	}
-	address {
+
+	&.resume_section_contact {
+		div {
+			text-align: center;
+			font-family: @font-family-monospace;
+		}
+		address {
+			margin: 0;
+		}
+	}
+
+	//
+	// List styling
+	//
+	.resume_section_list {
+		clear: both;
 		margin: 0;
+		padding: 0 0 0 12pt;
+
+		.resume_section_list-item {
+			.list-unstyled();
+
+			text-indent: -12pt;
+			margin: 4pt 0;
+
+			&:before {
+				color: @state-info-text;
+				content: '\f0da';
+				display: inline-block;
+				font-family: FontAwesome;
+				left: -12pt;
+				position: relative;
+				text-indent: 12pt;
+				width: 12pt;
+			}
+
+		}
 	}
-}
 
-//
-// List styling
-//
-.resume_section_list {
-	margin: 0;
-	padding: 0 0 0 12pt;
+} // .resume-section
 
-	.resume_section_list-item {
-		.list-unstyled();
+@media print {
+	a {
+		color: #000;
+	}
 
-		text-indent: -12pt;
-		margin: 4pt 0;
+	body {
+		padding-top: 0;
+	}
 
-		&:before {
-			color: @state-info-text;
-			content: '\f0da';
-			display: inline-block;
-			font-family: FontAwesome;
-			left: -12pt;
-			position: relative;
-			text-indent: 12pt;
-			width: 12pt;
+	.resume_section {
+		.resume_section_title {
+			margin: 4pt 0;
+			padding-bottom: 4pt;
 		}
 
+		.resume_section_dates {
+			color: @gray-darker;
+		}
+
+		.resume_section_header {
+			margin-bottom: 2pt;
+		}
+		.resume_section_subhead {
+			margin-bottom: 4pt;
+			color: @gray-darker;
+		}
+
+		.resume_section_list {
+			.resume_section_list-item {
+				margin: 0;
+			}
+		}
+
+		&.resume_section_intro {
+			padding-top: 0;
+		}
 	}
 }
 
-
-
-//.resume-intro {
-//	margin-top: 7.5pt;
-//}
-//
-//.resume-skills {
-//
-//	.section-contact {
-//		border: 1px solid #f00;
-//	} // .resume-section
-//
-//	.section-
-//
-////	.resume-section--skills {
-////		&.resume-section();
-////
-////		.resume-section--skills_skill {
-////			.list-unstyled();
-////
-////		} // .resume_tools
-////
-////	}
-//
-//}
