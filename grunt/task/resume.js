@@ -2,13 +2,15 @@
 
 module.exports = function (grunt) {
 	grunt.registerTask('resume', [
+		'clean:resume',
+		'clean:resume-cache',
 		'curl:resume-index',
 		'curl:resume-img-icons',
 		'curl-dir:resume-css',
 		'curl-dir:resume-fonts',
 		'resume:patch',
 		'shell:resume',
-		'clean:resume'
+		'clean:resume-cache'
 	]);
 
 	grunt.registerTask('resume:patch', function () {
@@ -17,7 +19,7 @@ module.exports = function (grunt) {
 
 		indexHtml = indexHtml
 			.replace(/OBFUSCATED/g, '')
-			.replace(/"\/(css|img)\//g, '"$1/');
+			.replace(/"\/.*\/(css|js|img)\//g, '"$1/');
 
 		grunt.file.write(indexHtmlFilename, indexHtml);
 

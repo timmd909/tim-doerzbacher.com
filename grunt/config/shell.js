@@ -2,9 +2,7 @@
 
 var WKHTMLTOPDF_OPTIONS = [
 	'--print-media-type',
-	'--no-background',
-	'--page-width 8.5in',
-	'--page-height 11in'
+	'--viewport-size 1280x1024'
 ].join(' ');
 
 module.exports = {

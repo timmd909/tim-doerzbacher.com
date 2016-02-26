@@ -1,5 +1,10 @@
 'use strict';
 
 module.exports = {
-	'resume': 'app/cache/resume'
+	'resume-cache': [
+		'app/cache/resume'
+	],
+	'resume': [
+		'web/resume.pdf'
+	]
 };
