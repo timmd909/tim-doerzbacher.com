@@ -20,8 +20,7 @@ resume:
         I've developed a skill set varied enough to take any web-based
         idea from initial concept, to design, and all the way through
         development to the finished implementation. I'm most comfortable
-        with open source software. I seek only to further my knowledge and
-        abilities until I'm the best possible programmer.
+        with open source software.
 
   languages:
     title: "Languages"
@@ -45,6 +44,7 @@ resume:
     entries:
       - { name: "Adobe Creative Suite", level: 5 }
       - { name: "Apache"              , level: 4 }
+      - { name: "Angular"             , level: 2 }
       - { name: "Bootstrap"           , level: 5 }
       - { name: "Eclipse"             , level: 5 }
       - { name: "ejabberd"            , level: 3 }
@@ -53,6 +53,7 @@ resume:
       - { name: "Grunt"               , level: 5 }
       - { name: "jQuery"              , level: 5 }
       - { name: "Jenkins"             , level: 4 }
+      - { name: "Knockout"            , level: 5 }
       - { name: "MediaWiki"           , level: 3 }
       - { name: "NodeJS"              , level: 4 }
       - { name: "MySQL/MariaDB"       , level: 5 }
@@ -63,17 +64,19 @@ resume:
       - { name: "QUnit"               , level: 5 }
       - { name: "Subversion"          , level: 5 }
       - { name: "Symfony2"            , level: 4 }
-      - { name: "Thrift"              , level: 4 }
+      - { name: "Thrift"              , level: 3 }
       - { name: "WordPress"           , level: 3 }
 
   skills:
-    title: "Skills"
+    title: "Skills & Techniques"
     entries:
+      - { name: "Agile Development"     , level: 5 }
       - { name: "AJAX"                  , level: 5 }
       - { name: "Database Design"       , level: 4 }
       - { name: "Graphic Design"        , level: 3 }
       - { name: "LAMP Servers"          , level: 5 }
       - { name: "Linux Administration"  , level: 4 }
+      - { name: "REST"                  , level: 4 }
       - { name: "Website Design"        , level: 4 }
 
   operating_systems:
