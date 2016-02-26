@@ -19,7 +19,7 @@ module.exports = function (grunt) {
 
 		indexHtml = indexHtml
 			.replace(/OBFUSCATED/g, '')
-			.replace(/"\/.*\/(css|js|img)\//g, '"$1/');
+			.replace(/"\/.*(css|js|img)\//g, '"$1/');
 
 		grunt.file.write(indexHtmlFilename, indexHtml);
 
