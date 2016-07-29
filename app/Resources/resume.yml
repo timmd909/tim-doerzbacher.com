@@ -66,11 +66,14 @@ resume:
       - { name: "PHPUnit"             , level: 4 }
       - { name: "Phabricator"         , level: 3 }
       - { name: "PostgreSQL"          , level: 3 }
+      - { name: "Python"              , level: 2 }
       - { name: "QUnit"               , level: 5 }
+      - { name: "Rasbian"             , level: 4 }
       - { name: "RequireJS"           , level: 5 }
       - { name: "Subversion"          , level: 5 }
       - { name: "Symfony2"            , level: 4 }
       - { name: "Thrift"              , level: 3 }
+      - { name: "Ubuntu"              , level: 5 }
       - { name: "WordPress"           , level: 3 }
 
   skills:
@@ -98,41 +101,41 @@ resume:
         description: "Front End Engineer / Release Engineer"
         responsibilities:
           - description:
-              Redesigned and implemented new release engineering process
+              Redesigned and implemented new release engineering process.
             notes:
-              - Fully automated publishing of release assets
-              - Automated release emails by using ChangeLog
-              - Organized and developed a branching strategy for release and development
+              - Fully automated publishing of release assets.
+              - Automated release emails by using ChangeLog.
+              - Organized and developed a branching strategy for release and development.
               - Redesigned the Grunt project files into a modular structure
-                and more easy to maintain structure
-              - Integrated Stash with Jenkins to enforce testing before merging
+                and more easy to maintain structure.
+              - Integrated Stash with Jenkins to enforce testing before merging.
               - Created automatic release process that is triggered by
-                new commits or merges to the master branch
-              - Built and maintain Jenkins build slave
+                new commits or merges to the master branch.
+              - Built and maintain Jenkins build slave.
               - Added additional linting rules and code to enforce consistency
-                in the code
+                in the code.
           - description:
-              Oversaw development of new major release of our product
+              Oversaw development of new major release of our product.
             notes:
               - The original architecture was of a large, monolithic package which
-                was prone to regressions
+                was prone to regressions.
               - Chopped the package in many smaller, more focused packages to
                 allow downstream implementers more flexibility with upgrading and
-                feature sets
+                feature sets.
           - description:
               Designed and implemented visual regression tests to improve
-              continuous integration
+              continuous integration.
             notes:
               - The testing framework is shared, making any updates or the testing
                 framework to be affected immediately in all existing and new modules
               - All demos in the documentation are automatically checked
-                for visual regressions
+                for visual regressions.
           - description:
               Evaluating and integrating additional third party libraries
-              in the shared toolkit
+              in the shared toolkit.
             notes:
               - Automated patching and tweaking (when necessary) so that
-                all libraries can be used seamlessly with RequireJS
+                all libraries can be used seamlessly with RequireJS.
 
         duration:
           start: "2014"
@@ -160,25 +163,31 @@ resume:
           - description:
               Integrating PHP and ejabberd based nodes and their respective
               database nodes into a custom XMPP-based messaging system.
-          - description:
-              Created syncing algorithm for finding other users on the system
             notes:
-              - One-way encryption was used for matches instead of original
+              - Apache Thrift was used to enable direct communication between
+                the PHP and ejabberd nodes.
+              - ejabbard calls originally queried the database through
+                Thrift calls to PHP. Rewrote to have the ejabberd nodes
+                directly query the PostgreSQL cluster when possible.
+          - description:
+              Created syncing algorithm for finding other users on the system.
+            notes:
+              - Hashing was used for matches instead of unencrypted
                 contact information.
-              - This prevented privacy concerns of having all user's contacts'
-                data stored unecrypted on the servers.
+              - This was done to protect privacy concerns while still being
+                able to match other users.
               - Normalized email and phone numbers to prevent false positives
-                and maximize matches.
+                and maximize matches. This was extremely important since all
+                contacts were stored only as hashes.
           - description:
               Improved and expanded automated testing suite;
-              increased the code coverage while at the same time
-              reducing the execution time.
+              increased the code coverage and reduced the execution time.
           - description:
               Handled all server related tasks to support other developers
               working on the Android and iOS clients.
             notes:
-              - Including setting up Nagios to handle monitoring of
-                server nodes, upgrading nodes, and creating new nodes.
+              - Set up Nagios on an AWS instance.
+              - Installed, configured, and upgrading of servers.
           - description:
               Built automated server build scripts for use by the rest of
               the team, decreasing the server-side ramp up time for new
