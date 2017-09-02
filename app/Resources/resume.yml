@@ -49,6 +49,7 @@ resume:
       - { name: "Bootstrap"           , level: 5 }
       - { name: "CasperJS"            , level: 5 }
       - { name: "CentOS"              , level: 3 }
+      - { name: "CodeIgniter"         , level: 4 }
       - { name: "DurandalJS"          , level: 5 }
       - { name: "Eclipse"             , level: 5 }
       - { name: "ejabberd"            , level: 3 }
@@ -62,14 +63,16 @@ resume:
       - { name: "MediaWiki"           , level: 3 }
       - { name: "MySQL/MariaDB"       , level: 5 }
       - { name: "Nagios"              , level: 3 }
+      - { name: "NightwatchJS"        , level: 4 }
       - { name: "NodeJS"              , level: 4 }
-      - { name: "PHPUnit"             , level: 4 }
       - { name: "Phabricator"         , level: 3 }
+      - { name: "PHPUnit"             , level: 4 }
       - { name: "PostgreSQL"          , level: 3 }
       - { name: "Python"              , level: 2 }
       - { name: "QUnit"               , level: 5 }
       - { name: "Rasbian"             , level: 4 }
       - { name: "RequireJS"           , level: 5 }
+      - { name: "Selenium"            , level: 4 }
       - { name: "Subversion"          , level: 5 }
       - { name: "Symfony2"            , level: 4 }
       - { name: "Thrift"              , level: 3 }
@@ -97,6 +100,25 @@ resume:
   experience:
     title: "Work Experience"
     entries:
+      - name: Opus One Interactive
+        description: Senior Engineer
+        responsibilities:
+          - description:
+              Added continuous integration to our builds and release process
+            notes:
+              - Integrations are run using custom GitLab runners
+              - Configured custom runners to run Selenium headless using Xvfb
+              - NightwatchJS is used to drive the Selenium tests
+          - description:
+              Leading the graduation migration from legacy PHP code to PSR
+              compatible code using Composer libraries
+            notes:
+              - Moving to PSR compatible code was done for better code
+                analysis, coverage, and code completion for quicker development
+        duration:
+          start: "2017"
+          end:
+
       - name: "Intermedix"
         description: "Front End Engineer / Release Engineer"
         responsibilities:
@@ -136,10 +158,9 @@ resume:
             notes:
               - Automated patching and tweaking (when necessary) so that
                 all libraries can be used seamlessly with RequireJS.
-
         duration:
           start: "2014"
-          end:
+          end: "2016"
 
       - name: "PiCon Web Design & Marketing"
         description: "Subcontractor"
