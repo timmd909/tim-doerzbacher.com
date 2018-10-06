@@ -34,9 +34,10 @@ resume:
       - { name: "JavaScript"  , level: 5 }
       - { name: "LESS"        , level: 4 }
       - { name: "MXML"        , level: 4 }
-      - { name: "SQL"         , level: 4 }
       - { name: "PHP"         , level: 5 }
       - { name: "Python"      , level: 2 }
+      - { name: "SASS"        , level: 4 }
+      - { name: "SQL"         , level: 4 }
       - { name: "Yaml"        , level: 5 }
 
   tools:
@@ -54,6 +55,7 @@ resume:
       - { name: "Eclipse"             , level: 5 }
       - { name: "ejabberd"            , level: 3 }
       - { name: "Facebook APIs"       , level: 3 }
+      - { name: "FreeCAD"             , level: 4 }
       - { name: "Git"                 , level: 5 }
       - { name: "Grep"                , level: 5 }
       - { name: "Grunt"               , level: 5 }
@@ -70,7 +72,8 @@ resume:
       - { name: "PostgreSQL"          , level: 3 }
       - { name: "Python"              , level: 2 }
       - { name: "QUnit"               , level: 5 }
-      - { name: "Rasbian"             , level: 4 }
+      - { name: "Rasbian"             , level: 5 }
+      - { name: "React"               , level: 3 }
       - { name: "RequireJS"           , level: 5 }
       - { name: "Selenium"            , level: 4 }
       - { name: "Subversion"          , level: 5 }
@@ -82,13 +85,14 @@ resume:
   skills:
     title: "Skills & Techniques"
     entries:
-      - { name: "Agile Development"     , level: 5 }
-      - { name: "Database Design"       , level: 4 }
-      - { name: "Graphic Design"        , level: 3 }
-      - { name: "LAMP Environments"     , level: 5 }
-      - { name: "Linux Administration"  , level: 4 }
-      - { name: "/Regular Expressions/" , level: 5 }
-      - { name: "Website Design"        , level: 4 }
+      - { name: "Agile Development"      , level: 5 }
+      - { name: "Building robots for fun", level: 5 }
+      - { name: "Database Design"        , level: 4 }
+      - { name: "Graphic Design"         , level: 3 }
+      - { name: "LAMP Environments"      , level: 5 }
+      - { name: "Linux Administration"   , level: 4 }
+      - { name: "/Regular Expressions/"  , level: 5 }
+      - { name: "Website Design"         , level: 4 }
 
   operating_systems:
     title: "Operating Systems"
@@ -104,10 +108,10 @@ resume:
         description: Senior Engineer
         responsibilities:
           - description:
-              Added continuous integration to our builds and release process
+              Added continuous integration tests to our build process
             notes:
-              - Integrations are run using custom GitLab runners
-              - Configured custom runners to run Selenium headless using Xvfb
+              - Integration tests are run using custom GitLab runners
+              - Configured runners to run Selenium headless using Xvfb
               - NightwatchJS is used to drive the Selenium tests
           - description:
               Leading the graduation migration from legacy PHP code to PSR
@@ -115,6 +119,37 @@ resume:
             notes:
               - Moving to PSR compatible code was done for better code
                 analysis, coverage, and code completion for quicker development
+          - description:
+              Fully automated release process
+            notes:
+              - Used Symfony based console commands to automate the creation
+                of release branches, and their associated merge requests
+                via Gitlab's API
+              - Upon successfully passing all tests and every thing is merged,
+                a release tag is automatically cut and pushed.
+              - Added Slack integration to alert developers to the progress
+                of the release process.
+          - description:
+              Created and implemented roadmap to move the UI off of legacy
+              CSS towards using Bootstrap 4 for styling
+            notes:
+              - I did any necessary adjustments and modifications to Boostrap 4
+                to make it appear similar to the legacy styling.
+              - Switching to Bootstrap alleviated styling inconsistency issues
+                caused primarily from conflicting CSS rules in the old styling.
+          - description:
+              Added Bootstrap support to gradually move away from legacy libraries
+            notes:
+              - Previously jQuery and Prototype were used to provide
+                interactive functionality.
+          - description:
+              Database clean up
+            notes:
+              - Previously, no foreign key checks were used causing
+                database inconsistencies
+              - Refactored code that relied on invalid IDs to implement
+                tri-state logic
+              - Added foreign keys and tests to ensure database sanity
         duration:
           start: "2017"
           end:
