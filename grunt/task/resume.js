@@ -7,10 +7,11 @@ module.exports = function (grunt) {
 		'curl:resume-index',
 		'curl:resume-img-icons',
 		'curl-dir:resume-css',
+		'curl-dir:resume-js',
 		'curl-dir:resume-fonts',
 		'resume:patch',
 		'shell:resume',
-		'clean:resume-cache'
+		// 'clean:resume-cache'
 	]);
 
 	grunt.registerTask('resume:patch', function () {

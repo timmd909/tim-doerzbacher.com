@@ -9,8 +9,15 @@ module.exports = {
 			WEBSITE_ROOT + 'css/font-awesome.css',
 			WEBSITE_ROOT + 'css/style.css',
 			WEBSITE_ROOT + 'css/resume.css',
+			WEBSITE_ROOT + 'css/print.css',
 		],
 		dest: 'app/cache/resume/css/'
+	},
+	'resume-js': {
+		src: [
+			WEBSITE_ROOT + 'js/resume.js',
+		],
+		dest: 'app/cache/resume/js/'
 	},
 	'resume-fonts': {
 		src: [
