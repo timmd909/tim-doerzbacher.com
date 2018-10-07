@@ -4,14 +4,6 @@ resume:
       value: '1OBFUSCATED • 412 OBFUSCATED• OBFUSCATED758 • 01OBFUSCATED79OBFUSCATED'
     - key:   email
       value: 'tim@OBFUSCATEDtim-doerzbOBFUSCATEDacher.com'
-    - key:   address
-      value: "13OBFUSCATED6 NortOBFUSCATEDh South DrivOBFUSCATEDe"
-    - key:   city
-      value: Pittsburgh
-    - key:   state
-      value: Pennsylvania
-    - key:   zip
-      value: "15237"
 
     - key:   headline
       value: "Software Engineer"
